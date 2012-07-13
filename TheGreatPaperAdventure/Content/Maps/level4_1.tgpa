@@ -1,0 +1,141 @@
+version 0,9
+
+//Map infos
+level 4
+lastpart true
+name Level4_1Name
+desc Level4_1Desc
+
+//BG1
+bg1 Left 10 0 True
+bgpart level4/lvl4_bg1_1
+bgpart level4/lvl4_bg1_2
+
+//BG2
+bg2 Left 20 0 True
+bgpart level4/lvl4_bg2
+
+//BG3 : Clouds
+bg3 Left 40 0 True
+bgpart vide
+bgpart vide
+bgpart level4/neige_bg3
+bgpart vide
+
+//Init game
+init
+music 
+score 0
+lives 5
+weapon MachineGun
+location 500 150
+flip None
+winflag endlevel
+loseflag playersdie
+outDirection Right
+
+begin
+
+//Trigger
+event "" 1 0
+start
+addbge ExplosifAvalanche 0,9 0,83 boom
+set stopScrollEnable
+endevent
+
+//Level start after avalanche animation
+event "" 1 0
+start boom
+unset stopScrollEnable
+scrollspeed 1 50 0
+scrollspeed 2 50 0
+scrollspeed 3 60 0
+wait 2 avalanche
+endevent
+
+//Stop scroll, wait player to pull the trigger
+event "" 40 0
+start stopScrollEnable
+scrollspeed 1 0 0
+scrollspeed 2 0 0
+endevent
+
+//Trigger time ! Scroll on
+event "" 1 0
+start avalanche
+unset stopScrollEnable
+addenemy Avalanche -1 0,1 nobonus nopattern noflags None
+changemusic level4_1Music "Firecrackers II" "Spintronic"
+scrollspeed 1 120 0
+scrollspeed 2 120 0
+scrollspeed 3 220 0
+endevent
+
+event "" 200 0
+start 
+scrollspeed 1 200 0
+scrollspeed 2 200 0
+scrollspeed 3 400 0
+endevent
+
+event "" 300 0
+start 
+scrollspeed 1 300 0
+scrollspeed 2 300 0
+scrollspeed 3 500 0
+
+addenemy MaskedEsquimo 1 0 nobonus nopattern endAvalanche None
+
+endevent
+
+event "" 450 0
+start 
+scrollspeed 1 350 0
+scrollspeed 2 350 0
+scrollspeed 3 400 0
+endevent
+
+event "" 500 0
+start 
+scrollspeed 1 400 0
+scrollspeed 2 400 0
+scrollspeed 3 500 0
+endevent
+
+event "" 600 0
+start 
+scrollspeed 1 600 0
+scrollspeed 2 600 0
+scrollspeed 3 800 0
+endevent
+
+event "" 800 0
+start 
+scrollspeed 1 800 0
+scrollspeed 2 800 0
+scrollspeed 3 1000 0
+endevent
+
+event "" 2000 0
+start 
+addenemy SapinLauncher 0,5 0,5 nobonus nopattern noflags None
+
+//Pop bonuses
+whilenot fini 10
+addrandombonus Weapon
+done
+
+endevent
+
+event "NiceEndLevel" 0 0
+start endAvalanche
+set stopSapin
+scrollspeed 1 600 0
+scrollspeed 2 600 0
+scrollspeed 3 800 0
+
+wait 5 endlevel
+
+endevent
+
+end

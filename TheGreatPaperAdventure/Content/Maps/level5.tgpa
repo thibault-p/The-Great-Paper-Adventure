@@ -1,0 +1,642 @@
+version 1,0
+
+//Map infos
+level 5
+lastpart true
+name Level5Name
+desc Level5Desc
+
+//BG1 
+bg1 Left 40 0 True
+bgpart level5/lvl5_1_bg1_1
+bgpart level5/lvl5_1_bg1_2
+bgpart level5/lvl5_1_bg1_3
+bgpart level5/lvl5_1_bg1_4
+bgpart level5/lvl5_1_bg1_5
+bgpart level5/lvl5_1_bg1_6
+bgpart level5/lvl5_1_bg1_7
+bgpart level5/lvl5_1_bg1_8
+bgpart level5/lvl5_1_bg1_9
+
+//BG2
+bg3 Left 45 0 False
+bgpart level5/lvl5_1_bg2_1
+bgpart level5/lvl5_1_bg2_2
+bgpart level5/lvl5_1_bg2_3
+bgpart level5/lvl5_1_bg2_4
+bgpart level5/lvl5_1_bg2_5
+bgpart level5/lvl5_1_bg2_6
+bgpart level5/lvl5_1_bg2_7
+bgpart level5/lvl5_1_bg2_8
+bgpart level5/lvl5_1_bg2_9
+bgpart level5/lvl5_1_bg2_10
+
+//BG3 
+bg3 Left 40 0 False
+bgpart vide
+
+//Init game
+init
+music level5Music "The Great Paper Adventure" "Spintronic" 
+score 0
+lives 5
+weapon MachineGun
+location 100 300
+flip None
+winflag endlevel
+loseflag playersdie
+outDirection Up
+
+begin
+
+event "" 100 0
+start 
+addenemy Witch 1,0 0,3 nobonus Left noflags None
+endevent
+
+event "" 150 0
+start 
+addenemy Witch 1,0 0,6 nobonus Left noflags None
+endevent
+
+event "" 250 0
+start 
+addenemy PoulpiKnight 1,0 0,5 nobonus SmallLace noflags None
+endevent
+
+event "" 300 0
+start 
+addenemy PoulpiKnight 1,0 0,4 nobonus SmallLace noflags None
+endevent
+
+event "" 350 0
+start 
+addenemy PoulpiKnight 1,0 0,3 nobonus SmallLace noflags None
+endevent
+
+event "" 400 0
+start 
+addenemy PoulpiKnight 1,0 0,7 nobonus SmallLace noflags None
+endevent
+
+event "" 450 0
+start 
+addenemy PoulpiKnight 1,0 0,6 nobonus SmallLace noflags None
+endevent
+
+event "" 500 0
+start 
+addenemy PoulpiKnight 1,0 0,5 MachineGun SmallLace noflags None
+endevent
+
+event "" 600 0
+start 
+addenemy Pumpkin 1,0 0,4 nobonus nopattern noflags None
+addenemy Pumpkin 1,0 0,7 nobonus nopattern noflags None
+endevent
+
+event "" 650 0
+start 
+addenemy FireSkull 1,0 0,35 nobonus nopattern noflags None
+addenemy FireSkull 1,0 0,65 nobonus nopattern noflags None
+endevent
+
+event "" 750 0
+start 
+addenemy FireSkull 1,0 0,5 nobonus nopattern noflags None
+endevent
+
+event "" 750 0
+start 
+addenemy FireSkull 1,0 0,5 nobonus nopattern noflags None
+endevent
+
+event "" 1000 0
+start 
+addenemy Witch -1 0,1 nobonus Right noflags FlipHorizontally
+addenemy Pumpkin 1 0,1 Flamethrower nopattern noflags None
+endevent
+
+event "" 1100 0
+start 
+addenemy Pumpkin 1 0,1 nobonus nopattern noflags None
+addenemy Pumpkin 1 0,2 nobonus nopattern noflags None
+addenemy Pumpkin 1 0,3 nobonus nopattern noflags None
+
+addenemy Pumpkin 1 0,6 nobonus nopattern noflags None
+addenemy Pumpkin 1 0,7 nobonus nopattern noflags None
+addenemy Pumpkin 1 0,8 nobonus nopattern noflags None
+addenemy Pumpkin 1 0,9 nobonus nopattern noflags None
+endevent
+
+event "" 1200 0
+start 
+addenemy Pumpkin 1 0,1 nobonus nopattern noflags None
+addenemy Pumpkin 1 0,2 nobonus nopattern noflags None
+addenemy Pumpkin 1 0,3 nobonus nopattern noflags None
+
+addenemy Pumpkin 1 0,6 nobonus nopattern noflags None
+addenemy Pumpkin 1 0,7 nobonus nopattern noflags None
+addenemy Pumpkin 1 0,8 nobonus nopattern noflags None
+addenemy Pumpkin 1 0,9 nobonus nopattern noflags None
+endevent
+
+event "" 1300 0
+start 
+addenemy Pumpkin 1 0,1 nobonus nopattern noflags None
+addenemy Pumpkin 1 0,2 nobonus nopattern noflags None
+addenemy Pumpkin 1 0,3 nobonus nopattern noflags None
+addenemy PoulpiKnight 1,0 0,5 Megabomb Left noflags None
+addenemy Pumpkin 1 0,6 nobonus nopattern noflags None
+addenemy Pumpkin 1 0,7 nobonus nopattern noflags None
+addenemy Pumpkin 1 0,8 nobonus nopattern noflags None
+addenemy Pumpkin 1 0,9 nobonus nopattern noflags None
+endevent
+
+event "" 1400 0
+start 
+addenemy Pumpkin 1 0,1 nobonus nopattern noflags None
+
+
+addenemy Pumpkin 1 0,6 nobonus nopattern noflags None
+addenemy Pumpkin 1 0,7 nobonus nopattern noflags None
+addenemy Pumpkin 1 0,8 nobonus nopattern noflags None
+addenemy Pumpkin 1 0,9 nobonus nopattern noflags None
+endevent
+
+event "" 1500 0
+start 
+addenemy Pumpkin 1 0,1 nobonus nopattern noflags None
+
+addenemy Pumpkin 1 0,4 nobonus nopattern noflags None
+addenemy Pumpkin 1 0,5 nobonus nopattern noflags None
+addenemy Pumpkin 1 0,6 nobonus nopattern noflags None
+addenemy Pumpkin 1 0,7 nobonus nopattern noflags None
+addenemy Pumpkin 1 0,8 nobonus nopattern noflags None
+addenemy Pumpkin 1 0,9 nobonus nopattern noflags None
+endevent
+
+event "" 1600 0
+start 
+addenemy Pumpkin 1 0,1 nobonus nopattern noflags None
+
+addenemy Pumpkin 1 0,4 nobonus nopattern noflags None
+addenemy Pumpkin 1 0,5 nobonus nopattern noflags None
+addenemy Pumpkin 1 0,6 nobonus nopattern noflags None
+addenemy Pumpkin 1 0,7 nobonus nopattern noflags None
+addenemy Pumpkin 1 0,8 nobonus nopattern noflags None
+addenemy Pumpkin 1 0,9 nobonus nopattern noflags None
+endevent
+
+event "" 1700 0
+start 
+addenemy Pumpkin 1 0,1 nobonus nopattern noflags None
+addenemy PoulpiKnight 1,0 0,2 MachineGun Left noflags None
+addenemy Pumpkin 1 0,9 nobonus nopattern noflags None
+endevent
+
+event "" 1800 0
+start 
+addenemy Witch -1 0,1 MachineGun Right noflags FlipHorizontally
+addenemy Pumpkin 1 0,1 nobonus nopattern noflags None
+addenemy Pumpkin 1 0,2 nobonus nopattern noflags None
+addenemy Pumpkin 1 0,3 nobonus nopattern noflags None
+addenemy Pumpkin 1 0,4 nobonus nopattern noflags None
+addenemy Pumpkin 1 0,5 nobonus nopattern noflags None
+addenemy Pumpkin 1 0,6 nobonus nopattern noflags None
+
+addenemy Pumpkin 1 0,9 nobonus nopattern noflags None
+endevent
+
+event "" 1900 0
+start 
+addenemy Pumpkin 1 0,1 nobonus nopattern noflags None
+addenemy Pumpkin 1 0,2 nobonus nopattern noflags None
+addenemy Pumpkin 1 0,3 nobonus nopattern noflags None
+addenemy Pumpkin 1 0,4 nobonus nopattern noflags None
+addenemy Pumpkin 1 0,5 nobonus nopattern noflags None
+addenemy Pumpkin 1 0,6 nobonus nopattern noflags None
+
+addenemy Pumpkin 1 0,9 nobonus nopattern noflags None
+endevent
+
+event "" 2000 0
+start 
+addenemy Pumpkin 1 0,7 nobonus nopattern noflags None
+addenemy Pumpkin 1 0,8 nobonus nopattern noflags None
+endevent
+
+event "" 2350 0
+start 
+addenemy FireSkull 1 0,2 nobonus nopattern noflags None
+endevent
+
+event "" 2400 0
+start 
+addenemy Witch 1 0,4 ShotGun nopattern noflags None
+endevent
+
+event "" 2500 0
+start 
+addenemy FireSkull 1 0,2 nobonus nopattern noflags None
+addenemy Witch 1 0,5 nobonus nopattern noflags None
+endevent
+
+event "" 2550 0
+start 
+whilenot poulpi3 3
+addenemy PoulpiKnight 1 0,5 nobonus Left noflags None
+done
+endevent
+
+event "" 2650 0
+start 
+whilenot poulpi3 3
+addenemy PoulpiKnight 0,5 1 nobonus Up noflags None
+done
+endevent
+
+event "" 2900 0
+start 
+addenemy PoulpiKnight 1 0,3 nobonus Left noflags None
+addenemy PoulpiKnight 1 0,4 nobonus Left noflags None
+endevent
+
+event "" 3000 0
+start 
+addenemy PoulpiKnight 0,7 -1 nobonus Down noflags None
+addenemy PoulpiKnight 0,8 -1 nobonus Down noflags None
+endevent
+
+event "" 3050 0
+start 
+set poulpi3
+addenemy PoulpiKnight 0,7 -1 nobonus Down noflags None
+addenemy PoulpiKnight 0,8 -1 nobonus Down noflags None
+endevent
+
+event "" 3100 0
+start 
+addenemy PoulpiKnight 0,7 -1 MachineGun Down noflags None
+addenemy PoulpiKnight 0,8 -1 nobonus Down noflags None
+endevent
+
+event "" 3150 0
+start 
+addenemy PoulpiKnight 1 0,3 nobonus Left noflags None
+addenemy PoulpiKnight 1 0,4 nobonus Left noflags None
+endevent
+
+event "" 3200 0
+start 
+addenemy PoulpiKnight 1 0,5 nobonus Left noflags None
+addenemy PoulpiKnight 1 0,6 nobonus Left noflags None
+endevent
+
+event "" 3250 0
+start 
+addenemy PoulpiKnight 1 0,1 nobonus Left noflags None
+addenemy PoulpiKnight 1 0,8 nobonus Left noflags None
+endevent
+
+event "" 3300 0
+start
+addenemy PoulpiKnight 1 0,2 nobonus Left noflags None
+addenemy PoulpiKnight 1 0,7 nobonus Left noflags None
+endevent
+
+event "" 3350 0
+start 
+addenemy PoulpiKnight 1 0,5 nobonus Left noflags None
+endevent
+
+event "" 3400 0
+start 
+addenemy PoulpiKnight 1 0,45 nobonus Left noflags None
+addenemy PoulpiKnight 1 0,55 nobonus Left noflags None
+endevent
+
+event "" 3450 0
+start 
+addenemy PoulpiKnight 1 0,45 nobonus Left noflags None
+addenemy PoulpiKnight 1 0,55 MachineGun Left noflags None
+endevent
+
+event "" 3600 0
+start 
+addenemy Pumpkin 1 0,5 nobonus nopattern noflags None
+addenemy FireSkull 1 0,2 Life Left noflags None
+endevent
+
+event "" 3700 0
+start 
+addenemy Pumpkin 1 0,8 nobonus nopattern noflags None
+endevent
+
+event "" 3800 0
+start 
+addenemy Pumpkin 1 0,7 nobonus nopattern noflags None
+addenemy PoulpiKnight 1 0,55 nobonus Left noflags None
+endevent
+
+event "" 3900 0
+start 
+addenemy Pumpkin 1 0,2 nobonus nopattern noflags None
+endevent
+
+event "" 4000 0
+start 
+addenemy Pumpkin 1 0,3 nobonus nopattern noflags None
+addenemy FireSkull 1 0,8 nobonus Left noflags None
+addenemy PoulpiKnight 1 0,35 nobonus Left noflags None
+endevent
+
+event "" 4100 0
+start 
+addenemy Pumpkin 1 0,3 Megabomb nopattern noflags None
+addenemy Witch 1 0,4 nobonus Left noflags None
+addenemy FireSkull 1 0,5 nobonus Left noflags None
+endevent
+
+event "" 4350 0
+start 
+addenemy PoulpiKnight 1 0,3 nobonus SmallUpAndDown noflags None
+endevent
+
+event "" 4400 0
+start 
+addenemy PoulpiKnight 1 0,5 nobonus SmallUpAndDown noflags None
+endevent
+
+event "" 4450 0
+start 
+addenemy PoulpiKnight 1 0,2 nobonus SmallUpAndDown noflags None
+endevent
+
+event "" 4500 0
+start 
+addenemy PoulpiKnight 1 0,6 nobonus SmallUpAndDown noflags None
+endevent
+
+event "" 4550 0
+start 
+addenemy PoulpiKnight 1 0,7 nobonus SmallUpAndDown noflags None
+endevent
+
+event "" 4600 0
+start 
+addenemy PoulpiKnight 1 0,4 nobonus SmallUpAndDown noflags None
+endevent
+
+event "" 4650 0
+start 
+addenemy PoulpiKnight 1 0,45 nobonus SmallUpAndDown noflags None
+endevent
+
+event "" 4700 0
+start 
+addenemy PoulpiKnight 1 0,55 nobonus SmallUpAndDown noflags None
+endevent
+
+event "" 4750 0
+start 
+addenemy PoulpiKnight 1 0,25 nobonus SmallUpAndDown noflags None
+endevent
+
+event "" 4800 0
+start 
+addenemy PoulpiKnight 1 0,25 nobonus SmallUpAndDown noflags None
+endevent
+
+event "" 4850 0
+start 
+addenemy PoulpiKnight 1 0,25 MachineGun SmallUpAndDown noflags None
+endevent
+
+event "" 4900 0
+start 
+addenemy FireSkull 1 0,25 nobonus nopattern noflags None
+endevent
+
+event "" 5100 0
+start 
+addenemy FireSkull 1 0,75 nobonus nopattern noflags None
+endevent
+
+event "" 5250 0
+start 
+addenemy Witch -1 0,85 nobonus Right noflags FlipHorizontally
+addenemy Witch -1 0,15 nobonus Right noflags FlipHorizontally
+endevent
+
+event "" 5300 0
+start 
+addenemy Witch -1 0,75 nobonus Right noflags FlipHorizontally
+addenemy Witch -1 0,25 nobonus Right noflags FlipHorizontally
+endevent
+
+event "" 5350 0
+start 
+addenemy Witch -1 0,6 nobonus Right noflags FlipHorizontally
+addenemy Witch -1 0,4 nobonus Right noflags FlipHorizontally
+endevent
+
+event "" 5500 0
+start 
+addenemy PoulpiKnight -1 0,7 nobonus RightUpCorner noflags FlipHorizontally
+addenemy PoulpiKnight 1 0,7 nobonus LeftUpCorner noflags None
+endevent
+
+event "" 5600 0
+start 
+addenemy PoulpiKnight -1 0,7 nobonus RightUpCorner noflags FlipHorizontally
+addenemy PoulpiKnight 1 0,7 nobonus LeftUpCorner noflags None
+endevent
+
+event "" 5700 0
+start 
+addenemy PoulpiKnight -1 0,7 nobonus RightUpCorner noflags FlipHorizontally
+addenemy PoulpiKnight 1 0,7 nobonus LeftUpCorner noflags None
+endevent
+
+event "" 5800 0
+start 
+addenemy FireSkull 1 0,2 MachineGun nopattern noflags None
+addenemy FireSkull 1 0,8 nobonus nopattern noflags None
+addenemy PoulpiKnight -1 0,7 nobonus RightUpCorner noflags FlipHorizontally
+addenemy PoulpiKnight 1 0,7 nobonus LeftUpCorner noflags None
+endevent
+
+event "" 5900 0
+start 
+addenemy Pumpkin 1 0,4 Life nopattern noflags None
+
+whilenot poulpi2 5
+addenemy PoulpiKnight 1 0,4 nobonus Left noflags None
+addenemy PoulpiKnight 1 0,7 nobonus Left noflags None
+done
+
+endevent
+
+event "" 6000 0
+start 
+addenemy FireSkull 1 0,2 nobonus nopattern noflags None
+addenemy FireSkull 1 0,8 nobonus nopattern noflags None
+endevent
+
+event "" 6100 0
+start 
+addenemy Pumpkin 1 0,7 nobonus nopattern noflags None
+endevent
+
+event "" 6300 0
+start 
+addenemy Pumpkin 1 0,5 nobonus nopattern noflags None
+endevent
+
+event "" 6400 0
+start 
+addenemy FireSkull 1 0,2 nobonus nopattern noflags None
+addenemy FireSkull 1 0,8 nobonus nopattern noflags None
+endevent
+
+event "" 6500 0
+start 
+addenemy Pumpkin 1 0,7 nobonus nopattern noflags None
+addenemy Pumpkin 1 0,3 nobonus nopattern noflags None
+endevent
+
+event "" 6550 0
+start 
+addenemy Pumpkin 1 0,54 Flamethrower nopattern noflags None
+addenemy Pumpkin 1 0,78 nobonus nopattern noflags None
+endevent
+
+event "" 6600 0
+start 
+addenemy Pumpkin 1 0,34 nobonus nopattern noflags None
+addenemy Pumpkin 1 0,48 nobonus nopattern noflags None
+endevent
+
+event "" 6650 0
+start 
+addenemy Pumpkin 1 0,14 nobonus nopattern noflags None
+addenemy Pumpkin 1 0,73 MachineGun nopattern noflags None
+endevent
+
+event "" 6800 0
+start 
+addenemy Witch 1 0,2 nobonus Left noflags None
+endevent
+
+event "" 6900 0
+start 
+addenemy Witch 1 0,3 nobonus Left noflags None
+endevent
+
+event "" 7000 0
+start 
+addenemy Witch 1 0,4 nobonus Left noflags None
+endevent
+
+event "" 7050 0
+start 
+set poulpi2
+addenemy FireSkull 1 0,5 nobonus nopattern noflags None
+endevent
+
+event "" 7100 0
+start 
+addenemy Witch -1 0,8 MachineGun Right noflags FlipHorizontally
+endevent
+
+event "" 7150 0
+start 
+addenemy FireSkull 1 0,5 nobonus nopattern noflags None
+endevent
+
+event "" 7200 0
+start 
+addenemy Witch -1 0,7 ShotGun Right noflags FlipHorizontally
+endevent
+
+event "" 7300 0
+start 
+addenemy Witch -1 0,6 nobonus Right noflags FlipHorizontally
+endevent
+
+event "" 7400 0
+start 
+whilenot poulpi1 3
+addenemy PoulpiKnight -1 0,25 nobonus Left noflags None
+addenemy PoulpiKnight -1 0,75 nobonus Left noflags None
+done
+endevent
+
+event "" 7500 0
+start 
+whilenot poulpi1 2
+addenemy PoulpiKnight 0,6 -1 nobonus Down noflags None
+done
+endevent
+
+event "" 7600 0
+start 
+whilenot poulpi1 2
+addenemy PoulpiKnight 0,8 1 nobonus LeftUpCorner noflags None
+done
+endevent
+
+event "" 7600 0
+start 
+addenemy FireSkull 1 0,5 MachineGun nopattern noflags None
+addenemy PoulpiKnight 0,6 -1 MachineGun Down noflags None
+endevent
+
+event "" 7750 0
+start 
+addenemy FireSkull 1 0,5 nobonus nopattern noflags None
+addenemy PoulpiKnight 0,6 -1 nobonus Down noflags None
+set poulpi1
+endevent
+
+
+event "fake_boss_fin_de_niveau" 7980 0 
+start 
+addbge DerrickAntenna 1,0 0,78 bossStart
+endevent
+
+event "stop_scroll" 8180 0 
+start 
+changemusicstate pause 
+scrollspeed 1 0 0
+scrollspeed 2 0 0
+endevent
+
+event "boss_fin_de_niveau" 7980 0 
+start bossStart
+
+changemusic boss5Music "Supernova" "Spintronic" 
+
+//Boss : GIANT RABBIT !
+addenemy Derrick 1 1 nobonus nopattern derrickIsDeadRestInPeace None
+
+//Pop bonuses
+whilenot derrickIsDeadRestInPeace 15
+addrandombonus Weapon
+done
+
+endevent
+
+event "wait_a_little" 0 0
+start crazyDocIsDead
+addbge GameEndTrick 0,5 0,5
+wait 6 endlevel
+endevent
+
+event "FinalBossLoadContent" 0 0
+start thisWillNeverHappend
+addenemy CrazyDoc 1 1 nobonus nopattern noflags None
+endevent
+
+end

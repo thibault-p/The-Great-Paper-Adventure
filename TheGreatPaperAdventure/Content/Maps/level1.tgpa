@@ -1,0 +1,651 @@
+version 0,9
+
+//Map infos
+level 1
+lastpart true
+name Level1Name
+desc Level1Desc
+
+//BG1
+bg1 Left 60 0 True
+bgpart level1/lvl1_bg1_1
+bgpart level1/lvl1_bg1_2
+
+//BG2
+bg2 Left 60 0 False
+bgpart vide
+bgpart level1/lvl1_bg2_1
+bgpart level1/lvl1_bg2_2
+bgpart level1/lvl1_bg2_3
+bgpart level1/lvl1_bg2_4
+bgpart level1/lvl1_bg2_5
+bgpart level1/lvl1_bg2_6
+bgpart level1/lvl1_bg2_7
+bgpart level1/lvl1_bg2_8
+bgpart level1/lvl1_bg2_9
+bgpart level1/lvl1_bg2_10
+
+//BG3 : Clouds
+bg3 Left 300 0 True
+bgpart vide
+
+//Init game
+init
+music level1Music "Firecrackers" "Spintronic"
+score 0
+lives 5
+weapon MachineGun
+location 200 300
+flip None
+winflag endlevel
+loseflag playersdie
+outDirection Right
+
+begin
+
+event "" 250 0
+start 
+addenemy Poulpi 1 0,1 nobonus Left noflags None
+addenemy Poulpi 1 0,8 nobonus Left noflags None
+endevent
+
+event "" 400 0
+start 
+addenemy Poulpi 1 0,2 nobonus Left noflags None
+addenemy Poulpi 1 0,7 nobonus Left noflags None
+endevent
+
+event "" 450 0
+start 
+addenemy Poulpi 1 0,3 nobonus Left noflags None
+addenemy Poulpi 1 0,6 nobonus Left noflags None
+endevent
+
+event "" 500 0
+start 
+addenemy Poulpi 1 0,5 MachineGun Left noflags None
+endevent
+
+event "" 700 0
+start 
+addenemy Poulpi 1 0,43 nobonus SmallInverseV noflags None
+addenemy Poulpi 1 0,33 nobonus SmallInverseV noflags None
+endevent
+
+event "" 750 0
+start 
+addenemy Poulpi 1 0,35 nobonus SmallInverseV noflags None
+addenemy Poulpi 1 0,5 nobonus SmallInverseV noflags None
+endevent
+
+event "" 800 0
+start 
+addenemy Poulpi 1 0,38 nobonus Left noflags None
+endevent
+
+event "" 900 0
+start 
+addenemy Poulpi -1 0,09 nobonus RightDownCorner noflags FlipHorizontally
+endevent
+
+event "" 930 0
+start 
+addenemy Poulpi -1 0,09 nobonus RightDownCorner noflags FlipHorizontally
+endevent
+
+event "" 1000 0
+start 
+addenemy Poulpi 1 0,85 nobonus LeftUpCorner noflags None
+endevent
+
+event "" 1050 0
+start 
+addenemy Poulpi 1 0,85 nobonus LeftUpCorner noflags None
+endevent
+
+event "" 1100 0
+start 
+addenemy Poulpi 1 0,85 MachineGun LeftUpCorner noflags None
+endevent
+
+event "" 1200 0
+start 
+addenemy Poulpi 1 1 nobonus SmallLace noflags None
+endevent
+
+event "" 1400 0
+start 
+addenemy Pepito 1 0,78 nobonus Left noflags None
+addenemy Pepito 1 0,67 nobonus Left noflags None
+addenemy Pepito 1 0,22 nobonus Left noflags None
+addenemy Pepito 1 0,11 nobonus Left noflags None
+endevent
+
+event "" 1500 0
+start 
+addenemy Pepito 1 0,39 nobonus SmallUpAndDown noflags None
+endevent
+
+event "" 1550 0
+start 
+addenemy Pepito 1 0,5 nobonus SmallUpAndDown noflags None
+endevent
+
+event "" 1600 0
+start 
+addenemy Pepito 1 0,6 nobonus SmallUpAndDown noflags None
+endevent
+
+event "" 1650 0
+start 
+addenemy Pepito 1 0,8 nobonus SmallUpAndDown noflags None
+endevent
+
+event "" 1700 0
+start 
+addenemy Pepito 1 0,7 nobonus SmallUpAndDown noflags None
+endevent
+
+event "" 2000 0
+start 
+addenemy Moustik -1 0,83 nobonus Right noflags FlipHorizontally
+addenemy Moustik -1 0,25 nobonus Right noflags FlipHorizontally
+addenemy Moustik 1 0,71 nobonus Left noflags None
+addenemy Moustik 1 0,1 nobonus Left noflags None
+endevent
+
+event "" 2100 0
+start 
+addenemy Pepito 1 0,6 nobonus SmallUpAndDown noflags None
+addenemy Pepito 1 0,3 nobonus SmallUpAndDown noflags None
+endevent
+
+event "" 2200 0
+start 
+addenemy Pepito 1 0,55 nobonus SmallUpAndDown noflags None
+addenemy Pepito 1 0,25 nobonus SmallUpAndDown noflags None
+endevent
+
+event "" 2300 0
+start 
+addenemy Pepito 1 0,50 nobonus SmallUpAndDown noflags None
+addenemy Pepito 1 0,20 nobonus SmallUpAndDown noflags None
+endevent
+
+event "" 2400 0
+start 
+addenemy Poulpi 1 -1 nobonus LeftDownCorner noflags None
+addenemy Poulpi 1 1 nobonus LeftUpCorner noflags None
+endevent
+
+event "" 2500 0
+start 
+addenemy Poulpi 1 -1 nobonus LeftDownCorner noflags None
+addenemy Poulpi 1 1 nobonus LeftUpCorner noflags None
+endevent
+
+event "" 2700 0
+start 
+addenemy Pepito -1 0,16 nobonus RightDownCorner noflags FlipHorizontally
+endevent
+
+event "" 3100 0
+start 
+addenemy Poulpi 1 0,09 nobonus Left noflags None
+addenemy Poulpi -1 0,8 nobonus Right noflags FlipHorizontally
+endevent
+
+event "" 3150 0
+start 
+addenemy Poulpi 1 0,09 nobonus Left noflags None
+addenemy Poulpi -1 0,8 nobonus Right noflags FlipHorizontally
+endevent
+
+event "" 3300 0
+start 
+addenemy Pepito -1 0,7 nobonus Right noflags FlipHorizontally
+endevent
+
+event "" 3500 0
+start 
+addenemy Poulpi 1 -1 nobonus InverseV noflags None
+endevent
+
+event "" 3510 0
+start 
+addenemy Pepito 1 0,16 nobonus Left noflags None
+endevent
+
+event "" 3525 0
+start 
+addenemy Poulpi 1 0,66 nobonus Left noflags None
+endevent
+
+event "" 3570 0
+start 
+addenemy Pepito -1 0,08 nobonus Right noflags FlipHorizontally
+endevent
+
+event "" 3575 0
+start 
+addenemy Pepito -1 0,24 nobonus Right noflags FlipHorizontally
+addenemy Pepito -1 0,4 nobonus Right noflags FlipHorizontally
+endevent
+
+event "" 3600 0
+start 
+addenemy Poulpi 1 0,15 nobonus LeftDownCorner noflags None
+endevent
+
+event "" 3630 0
+start 
+addenemy Poulpi 1 0,7 nobonus LeftUpCorner noflags None
+endevent
+
+event "" 3700 0
+start 
+addenemy Poulpi 1 0,7 nobonus Left noflags None
+addenemy Pepito -1 0,7 MachineGun Right noflags FlipHorizontally
+endevent
+
+event "" 3750 0
+start 
+addenemy Poulpi 1 0,66 nobonus Left noflags None
+addenemy Poulpi 1 0,15 nobonus Left noflags None
+endevent
+
+event "" 4000 0
+start 
+addenemy Poulpi 1 -0,5 nobonus SmallUpAndDown noflags None
+endevent
+
+event "" 4000 0
+start 
+addenemy CowLauncher 1 -1 nobonus nopattern noflags None
+endevent
+
+event "" 4050 0
+start 
+addenemy Poulpi 1 -0,5 nobonus SmallUpAndDown noflags None
+endevent
+
+event "" 4100 0
+start 
+addenemy Poulpi 1 -0,5 nobonus SmallUpAndDown noflags None
+endevent
+
+event "" 4150 0
+start 
+addenemy Poulpi 1 -0,5 nobonus SmallUpAndDown noflags None
+endevent
+
+event "" 4200 0
+start 
+addenemy Poulpi 1 -0,5 nobonus SmallUpAndDown noflags None
+endevent
+
+event "" 4250 0
+start 
+addenemy Poulpi 1 -0,4 Megabomb SmallUpAndDown noflags None
+endevent
+
+event "" 4300 0
+start 
+addenemy Poulpi 1 -0,4 nobonus SmallUpAndDown noflags None
+endevent
+
+event "" 4400 0
+start 
+addenemy CowLauncher 1 -1 nobonus nopattern noflags None
+endevent
+
+event "" 4350 0
+start 
+addenemy Poulpi 1 -0,4 nobonus SmallUpAndDown noflags None
+endevent
+
+event "" 4400 0
+start 
+addenemy Poulpi 1 -0,4 nobonus SmallUpAndDown noflags None
+endevent
+
+event "" 4615 0
+start 
+addenemy Poulpi 1 0,83 nobonus SmallInverseV noflags None
+endevent
+
+event "" 4625 0
+start 
+addenemy Poulpi 1 0,58 nobonus SmallInverseV noflags None
+endevent
+
+event "" 4635 0
+start 
+addenemy Poulpi 1 0,33 nobonus SmallInverseV noflags None
+endevent
+
+event "" 4650 0
+start 
+addenemy Poulpi 1 1 nobonus LeftUpCorner noflags None
+addenemy Poulpi 1 -1 nobonus LeftDownCorner noflags None
+endevent
+
+event "" 5190 0
+start 
+addenemy Pepito 1 0,12 nobonus Left noflags None
+endevent
+
+event "" 5350 0
+start 
+addenemy Pepito 1 0,29 nobonus Left noflags None
+endevent
+
+event "" 5450 0
+start 
+addenemy Pepito 1 0,49 Megabomb Left noflags None
+endevent
+
+event "" 5550 0
+start 
+addenemy Pepito 1 0,64 nobonus Left noflags None
+endevent
+
+event "" 5650 0
+start 
+addenemy Pepito 1 0,79 nobonus Left noflags None
+endevent
+
+event "" 5850 0
+start 
+addenemy Pepito 1 0,9 nobonus Left noflags None
+endevent
+
+event "" 5800 0
+start 
+addenemy Poulpi 1 1 Flamethrower InverseV noflags None
+addenemy Poulpi 1 -1 nobonus V noflags None
+endevent
+
+event "" 5950 0
+start 
+addenemy Poulpi 1 1 nobonus InverseV noflags None
+addenemy Poulpi 1 -1 nobonus V noflags None
+endevent
+
+event "" 6100 0
+start 
+addenemy Poulpi 1 1 nobonus InverseV noflags None
+addenemy Poulpi 1 -1 nobonus V noflags None
+endevent
+
+event "" 6250 0
+start 
+addenemy Poulpi 1 0,53 nobonus LeftAndRight noflags None
+endevent
+
+event "" 6300 0
+start 
+addenemy Poulpi 1 0,33 nobonus LeftAndRight noflags None
+endevent
+
+event "" 6500 0
+start 
+addenemy Poulpi 1 1 Life LeftAndRight noflags None
+endevent
+
+event "" 6550 0
+start 
+addenemy Poulpi 1 -1 nobonus LeftAndRight noflags None
+addenemy Moustik 1 0,6 nobonus Left noflags None
+endevent
+
+event "" 6500 0
+start 
+addenemy CowLauncher 1 -1 nobonus nopattern noflags None
+endevent
+
+event "" 6900 0
+start 
+addenemy CowLauncher 1 -1 nobonus nopattern noflags None
+endevent
+
+event "" 7000 0
+start 
+addenemy Poulpi 1 1 Flamethrower LeftUpCorner noflags None
+addenemy Poulpi 1 -1 nobonus LeftDownCorner noflags None
+endevent
+
+event "" 7400 0
+start 
+addenemy Poulpi 1 0,13 nobonus BigUpAndDown noflags None
+addenemy Poulpi 1 0,76 nobonus BigUpAndDown noflags None
+endevent
+
+
+event "" 7500 0
+start 
+addenemy Poulpi -1 0,73 nobonus BigUpAndDown noflags FlipHorizontally
+addenemy Poulpi -1 0,15 nobonus BigUpAndDown noflags FlipHorizontally
+endevent
+
+event "" 7600 0
+start 
+addenemy Pepito 1 1 nobonus LeftUpCorner noflags None
+endevent
+
+event "" 7700 0
+start 
+addenemy Poulpi 1 0,33 nobonus SmallUpAndDown noflags None
+addenemy Poulpi 1 0,51 nobonus SmallUpAndDown noflags None
+endevent
+
+event "" 7850 0
+start 
+addenemy Pepito 1 1 nobonus LeftUpCorner noflags None
+endevent
+
+event "" 7900 0
+start 
+addenemy Pepito -1 0,1 nobonus Right noflags FlipHorizontally
+endevent
+
+event "" 7950 0
+start 
+addenemy Pepito -1 0,74 nobonus Right noflags FlipHorizontally
+endevent
+
+event "" 8000 0
+start 
+addenemy Moustik 1 0,47 nobonus Left noflags None
+endevent
+
+event "" 8100 0
+start 
+addenemy Pepito 1 1 nobonus LeftUpCorner noflags None
+addenemy Pepito 1 -1 nobonus LeftDownCorner noflags None
+endevent
+
+event "" 8400 0
+start 
+addenemy Pepito 1 -1 nobonus LeftDownCorner noflags None
+endevent
+
+event "" 8800 0
+start 
+addenemy Pepito 1 -1 nobonus LeftDownCorner noflags None
+endevent
+
+event "" 9050 0
+start 
+addenemy Poulpi 1 -1 Flamethrower SmallLace noflags None
+endevent
+
+event "" 9100 0
+start 
+addenemy Poulpi 1 -1 nobonus SmallLace noflags None
+endevent
+
+event "" 9200 0
+start 
+addenemy Poulpi 1 1 nobonus SmallLace noflags None
+endevent
+
+event "" 9250 0
+start 
+addenemy Poulpi 1 1 nobonus SmallLace noflags None
+endevent
+
+event "" 9500 0
+start 
+addenemy Moustik -1 0,68 MachineGun Right noflags FlipHorizontally
+addenemy Moustik -1 0,22 nobonus Right noflags FlipHorizontally
+addenemy Moustik -1 0,1 nobonus Right noflags FlipHorizontally
+addenemy Moustik -1 0,81 nobonus Right noflags FlipHorizontally
+addenemy Moustik 1 0,43 nobonus Left noflags None
+endevent
+
+event "" 9600 0
+start 
+addenemy Pepito 1 0,7 nobonus Left noflags None
+addenemy Pepito 1 0,1 nobonus Left noflags None
+endevent
+
+event "" 9700 0
+start 
+addenemy Poulpi -1 0,72 nobonus Right noflags FlipHorizontally
+addenemy Poulpi 1 0,19 nobonus Left noflags None
+endevent
+
+event "" 9750 0
+start 
+addenemy Poulpi -1 0,73 nobonus Right noflags FlipHorizontally
+addenemy Poulpi 1 0,19 nobonus Left noflags None
+endevent
+
+event "" 9800 0
+start 
+addenemy Poulpi -1 0,73 nobonus Right noflags FlipHorizontally
+addenemy Poulpi 1 0,19 nobonus Left noflags None
+endevent
+
+event "" 9850 0
+start 
+addenemy Poulpi -1 0,73 nobonus Right noflags FlipHorizontally
+addenemy Poulpi 1 0,19 nobonus Left noflags None
+endevent
+
+//Boss
+//************************************************************************
+event "boss_fin_de_niveau" 10240 0
+start 
+
+changemusic boss1Music "PS_ I love U (23-906)" "Spintronic" 
+
+//Boss : BN
+addenemy BN 1 0,26 nobonus nopattern BNkilled None
+
+//Stop scrolling (not for clouds)
+scrollspeed 1 0 0
+scrollspeed 2 0 0
+scrollspeed 3 100 0
+
+//Pop bonuses
+whilenot fini 45
+addrandombonus Weapon
+done
+
+endevent
+
+event "wait_a_little" 0 0
+start BNkilled
+wait 3 endlevel
+endevent
+
+//Enemies on the "ground"
+//************************************************************************
+event "popCaca" 1220 0
+start 
+addenemy Caca 1 0,85 MachineGun nopattern noflags None
+endevent
+
+event "popCaca" 1270 0
+start 
+addenemy Caca 1 0,85 nobonus nopattern noflags None
+endevent
+
+event "popCaca" 1320 0
+start 
+addenemy Caca 1 0,85 nobonus nopattern noflags None
+endevent
+
+event "popCow" 1350 0
+start 
+addenemy Cow 1 0,68 nobonus nopattern noflags None
+endevent
+
+event "popCaca" 1470 0
+start 
+addenemy Caca 1 0,88 nobonus nopattern noflags None
+endevent
+
+event "popCaca" 1420 0
+start 
+addenemy Caca 1 0,88 nobonus nopattern noflags None
+endevent
+
+event "popCaca" 4000 0
+start 
+addenemy Caca 1 0,72 nobonus nopattern noflags None
+endevent
+
+event "popCaca" 4050 0
+start 
+addenemy Caca 1 0,72 nobonus nopattern noflags None
+endevent
+
+event "popCaca" 4100 0
+start 
+addenemy Caca 1 0,73 nobonus nopattern noflags None
+endevent
+
+event "popCaca" 4150 0
+start 
+addenemy Caca 1 0,74 nobonus nopattern noflags None
+endevent
+
+event "popCaca" 5000 0
+start 
+addenemy Caca 1 0,5 nobonus nopattern noflags None
+endevent
+
+event "popCaca" 5400 0
+start 
+addenemy Caca 1 0,5 nobonus nopattern noflags None
+endevent
+
+event "popCaca" 5500 0
+start 
+addenemy Caca 1 0,5 nobonus nopattern noflags None
+endevent
+
+event "popCaca" 5600 0
+start 
+addenemy Caca 1 0,5 nobonus nopattern noflags None
+endevent
+
+event "popCaca" 8050 0
+start 
+addenemy Caca 1 0,69 nobonus nopattern noflags None
+endevent
+
+event "popCaca" 8100 0
+start 
+addenemy Caca 1 0,69 nobonus nopattern noflags None
+endevent
+
+event "popCaca" 8150 0
+start 
+addenemy Caca 1 0,69 MachineGun nopattern noflags None
+endevent
+
+end

@@ -1,0 +1,615 @@
+version 0,9
+
+//Map infos
+level 3
+lastpart true
+name Level3_2Name
+desc Level3Part2Desc
+
+//BG1
+bg1 Right 40 0 True
+bgpart level3/part2/lvl3_2_bg1_8
+bgpart level3/part2/lvl3_2_bg1_7
+bgpart level3/part2/lvl3_2_bg1_6
+bgpart level3/part2/lvl3_2_bg1_5
+bgpart level3/part2/lvl3_2_bg1_4
+bgpart level3/part2/lvl3_2_bg1_3
+bgpart level3/part2/lvl3_2_bg1_2
+bgpart level3/part2/lvl3_2_bg1_1
+
+//BG2
+bg2 Left 60 0 True
+bgpart vide
+
+bg3 Up 0 0 False
+bgpart vide
+
+//Init game
+init
+music level3_2Music "Gameboy addicted" "Spintronic"
+score 0
+lives 5
+weapon ShotGun
+location 500 300
+flip FlipHorizontally
+winflag endlevel
+loseflag playersdie
+outDirection Left
+
+begin
+
+event "zombie!" 10 0
+start 
+addenemy PoulpiZombie -1 0,2 ShotGun Right noflags FlipHorizontally
+endevent
+
+event "zombie!" 60 0
+start 
+addenemy PoulpiZombie -1 0,2 ShotGun Right noflags FlipHorizontally
+endevent
+
+event "zombie!" 110 0
+start 
+addenemy PoulpiZombie -1 0,2 Flamethrower Right noflags FlipHorizontally
+endevent
+
+event "zombie!" 160 0
+start 
+addenemy PoulpiZombie -1 0,1 nobonus Right noflags FlipHorizontally
+addenemy PoulpiZombie -1 0,2 nobonus Right noflags FlipHorizontally
+addenemy PoulpiZombie -1 0,3 nobonus Right noflags FlipHorizontally
+addenemy PoulpiZombie -1 0,4 nobonus Right noflags FlipHorizontally
+addenemy PoulpiZombie -1 0,5 nobonus Right noflags FlipHorizontally
+addenemy PoulpiZombie -1 0,6 nobonus Right noflags FlipHorizontally
+addenemy PoulpiZombie -1 0,7 nobonus Right noflags FlipHorizontally
+addenemy PoulpiZombie -1 0,8 nobonus Right noflags FlipHorizontally
+addenemy PoulpiZombie -1 0,9 nobonus Right noflags FlipHorizontally
+endevent
+
+event "zombie!" 150 0
+start 
+
+whilenot poulpiStop 3
+addenemy PoulpiZombie -1 0,1 nobonus Right noflags FlipHorizontally
+addenemy PoulpiZombie -1 0,3 nobonus Right noflags FlipHorizontally
+addenemy PoulpiZombie -1 0,5 nobonus Right noflags FlipHorizontally
+addenemy PoulpiZombie -1 0,7 nobonus Right noflags FlipHorizontally
+addenemy PoulpiZombie -1 0,9 nobonus Right noflags FlipHorizontally
+done
+
+endevent
+
+event "zombie!" 200 0
+start 
+
+whilenot poulpiStop 3
+addenemy PoulpiZombie -1 0,2 nobonus Right noflags FlipHorizontally
+addenemy PoulpiZombie -1 0,4 nobonus Right noflags FlipHorizontally
+addenemy PoulpiZombie -1 0,6 nobonus Right noflags FlipHorizontally
+addenemy PoulpiZombie -1 0,8 nobonus Right noflags FlipHorizontally
+done
+
+endevent
+
+event "zombie!" 300 0
+start 
+
+whilenot poulpiStop 3
+addenemy PoulpiZombie 1 0,15 nobonus Left noflags None
+addenemy PoulpiZombie 1 0,35 nobonus Left noflags None
+addenemy PoulpiZombie 1 0,55 nobonus Left noflags None
+addenemy PoulpiZombie 1 0,75 nobonus Left noflags None
+addenemy PoulpiZombie 1 0,95 nobonus Left noflags None
+done
+
+endevent
+
+event "zombie!" 350 0
+start 
+
+whilenot poulpiStop 10
+addenemy PoulpiZombie 1 0,25 nobonus Left noflags None
+addenemy PoulpiZombie 1 0,45 nobonus Left noflags None
+addenemy PoulpiZombie 1 0,65 nobonus Left noflags None
+addenemy PoulpiZombie 1 0,85 nobonus Left noflags None
+done
+
+endevent
+
+event "stopZombie!" 1250 0
+start 
+set poulpiStop
+endevent
+
+event "zombie!" 900 0
+start 
+addenemy FlipperZombie -1 0,75 ShotGun Right noflags FlipHorizontally
+endevent
+
+event "zombie!" 1100 0
+start 
+addenemy FlipperZombie -1 0,75 Flamethrower Right noflags FlipHorizontally
+endevent
+
+event "zombie!" 1300 0
+start 
+
+addenemy FlipperZombie -1 0,75 RocketLauncher Right noflags FlipHorizontally
+unset poulpiStop
+
+whilenot poulpiStop 2
+addenemy PoulpiZombie -1 0,6 nobonus SmallUpAndDown noflags FlipHorizontally
+done
+
+endevent
+
+event "zombie!" 1350 0
+start 
+
+whilenot poulpiStop 2
+addenemy PoulpiZombie -1 0,3 nobonus SmallUpAndDown noflags FlipHorizontally
+done
+
+endevent
+
+event "zombie!" 1350 0
+start 
+
+whilenot poulpiStop 2
+addenemy PoulpiZombie -1 0,2 nobonus SmallUpAndDown noflags FlipHorizontally
+done
+
+endevent
+
+event "zombie!" 1350 0
+start 
+
+whilenot poulpiStop 2
+addenemy PoulpiZombie -1 0,7 nobonus SmallUpAndDown noflags FlipHorizontally
+done
+
+endevent
+
+event "zombie!" 1400 0
+start 
+
+whilenot poulpiStop 2
+addenemy PoulpiZombie -1 0,5 nobonus Right noflags FlipHorizontally
+done
+
+endevent
+
+event "zombie!" 1350 0
+start 
+
+whilenot poulpiStop 5
+addenemy PoulpiZombie 1 0,5 nobonus Left noflags None
+done
+
+endevent
+
+event "zombie!" 1400 0
+start 
+
+whilenot poulpiStop 5
+addenemy PoulpiZombie 1 0,6 nobonus Left noflags None
+done
+
+endevent
+
+event "zombie!" 1500 0
+start 
+addenemy McBernickZombie 0,6 1 Flamethrower LeftAndRight noflags None
+endevent
+
+event "zombie!" 1550 0
+start 
+addenemy McBernickZombie 0,2 1 Flamethrower LeftAndRight noflags FlipHorizontally
+endevent
+
+event "zombie!" 1600 0
+start 
+addenemy McBernickZombie 0,4 1 nobonus LeftAndRight noflags FlipHorizontally
+endevent
+
+event "zombie!" 1650 0
+start 
+addenemy FlipperZombie -1 0,75 RocketLauncher Right noflags FlipHorizontally
+endevent
+
+event "zombie!" 1700 0
+start 
+addenemy FlipperZombie -1 0,78 nobonus Right noflags FlipHorizontally
+endevent
+
+event "zombie!" 1750 0
+start 
+addenemy FlipperZombie -1 0,84 nobonus Right noflags FlipHorizontally
+endevent
+
+event "zombie!" 1800 0
+start 
+addenemy FlipperZombie -1 0,81 RocketLauncher Right noflags FlipHorizontally
+endevent
+
+event "stopZ" 2600 0
+start 
+set poulpiStop
+endevent
+
+event "zombie!" 2650 0
+start 
+addenemy FlipperZombie -1 0,71 nobonus Right noflags FlipHorizontally
+addenemy FlipperZombie -1 0,76 nobonus Right noflags FlipHorizontally
+
+whilenot poulpiStop 3
+addenemy PoulpiZombie 0,5 1 nobonus Up noflags None
+addenemy PoulpiZombie 0,55 1 nobonus Up noflags None
+addenemy PoulpiZombie 0,6 1 nobonus Up noflags None
+done
+
+endevent
+
+event "zombie!" 2800 0
+start 
+unset poulpiStop
+
+whilenot poulpiStop 6
+addenemy PoulpiZombie 0,2 -1 nobonus Down noflags None
+done
+
+endevent
+
+event "zombie!" 2815 0
+start 
+unset poulpiStop
+
+whilenot poulpiStop 7
+addenemy PoulpiZombie 0,5 -1 nobonus Down noflags None
+done
+
+endevent
+
+event "zombie!" 2830 0
+start 
+unset poulpiStop
+
+whilenot poulpiStop 5
+addenemy PoulpiZombie 0,4 -1 nobonus Down noflags None
+done
+
+endevent
+
+event "zombie!" 2900 0
+start 
+unset poulpiStop
+
+whilenot poulpiStop 4
+addenemy PoulpiZombie 0,8 -1 nobonus LeftAndRight noflags None
+done
+
+endevent
+
+event "zombie!" 2950 0
+start 
+unset poulpiStop
+
+whilenot poulpiStop 7
+addenemy PoulpiZombie 0,5 -1 nobonus LeftAndRight noflags None
+done
+
+endevent
+
+event "zombie!" 3000 0
+start 
+addenemy FlipperZombie -1 0,80 RocketLauncher Right noflags FlipHorizontally
+addenemy McBernickZombie -1 0,4 nobonus RightUpCorner noflags FlipHorizontally
+endevent
+
+event "zombie!" 3100 0
+start 
+addenemy McBernickZombie -1 0,6 nobonus RightDownCorner noflags FlipHorizontally
+endevent
+
+event "zombie!" 3200 0
+start 
+addenemy McBernickZombie -1 0,2 nobonus Right noflags FlipHorizontally
+addenemy McBernickZombie -1 0,3 nobonus Right noflags FlipHorizontally
+endevent
+
+event "zombie!" 3250 0
+start 
+addenemy McBernickZombie -1 0,7 Flamethrower Right noflags FlipHorizontally
+addenemy McBernickZombie -1 0,8 nobonus Right noflags FlipHorizontally
+endevent
+
+event "zombie!" 3300 0
+start 
+addenemy FlipperZombie -1 0,76 nobonus Right noflags FlipHorizontally
+endevent
+
+event "zombie!" 3350 0
+start 
+addenemy FlipperZombie -1 0,79 nobonus Right noflags FlipHorizontally
+endevent
+
+event "zombie!" 3400 0
+start 
+addenemy FlipperZombie -1 0,72 Flamethrower Right noflags FlipHorizontally
+endevent
+
+event "zombie!" 3475 0
+start 
+addenemy McBernickZombie 1 0,8 ShotGun Left noflags None
+endevent
+
+event "zombie!" 3500 0
+start 
+addenemy McBernickZombie -1 0,7 ShotGun Right noflags FlipHorizontally
+endevent
+
+event "zombie!" 3525 0
+start 
+addenemy McBernickZombie 1 0,7 nobonus Left noflags None
+endevent
+
+event "zombie!" 3550 0
+start 
+addenemy McBernickZombie -1 0,6 nobonus Right noflags FlipHorizontally
+endevent
+
+event "zombie!" 3575 0
+start 
+addenemy McBernickZombie 1 0,6 nobonus Left noflags None
+endevent
+
+event "zombie!" 3650 0
+start 
+addenemy FlipperZombie -1 0,79 nobonus Right noflags FlipHorizontally
+endevent
+
+event "zombie!" 3700 0
+start 
+addenemy FlipperZombie -1 0,72 Flamethrower Right noflags FlipHorizontally
+endevent
+
+event "stopZ" 3800 0
+start 
+set poulpiStop
+endevent
+
+event "zombie!" 3950 0
+start 
+unset poulpiStop
+
+whilenot poulpiStop 2
+addenemy PoulpiZombie 1 0,75 nobonus Left noflags None
+done
+
+endevent
+
+event "zombie!" 3950 0
+start 
+whilenot poulpiStop 3
+addenemy PoulpiZombie 1 0,35 nobonus Left noflags None
+done
+endevent
+
+event "zombie!" 3950 0
+start 
+whilenot poulpiStop 4
+addenemy PoulpiZombie -1 0,48 nobonus Right noflags FlipHorizontally
+done
+endevent
+
+event "zombie!" 3950 0
+start 
+whilenot poulpiStop 2
+addenemy PoulpiZombie 0,2 1 nobonus Up noflags None
+done
+endevent
+
+event "zombie!" 3950 0
+start 
+whilenot poulpiStop 5
+addenemy PoulpiZombie 0,4 1 nobonus Up noflags None
+done
+endevent
+
+event "zombie!" 4100 0
+start 
+addenemy FlipperZombie -1 0,79 nobonus Right noflags FlipHorizontally
+addenemy McBernickZombie -1 0,8 RocketLauncher SmallUpAndDown noflags FlipHorizontally
+endevent
+
+event "zombie!" 4150 0
+start 
+addenemy FlipperZombie -1 0,72 RocketLauncher Right noflags FlipHorizontally
+endevent
+
+event "zombie!" 4200 0
+start 
+addenemy FlipperZombie -1 0,79 RocketLauncher Right noflags FlipHorizontally
+endevent
+
+event "zombie!" 4250 0
+start 
+addenemy FlipperZombie -1 0,72 ShotGun Right noflags FlipHorizontally
+endevent
+
+event "zombie!" 4300 0
+start 
+addenemy FlipperZombie -1 0,79 ShotGun Right noflags FlipHorizontally
+endevent
+
+event "zombie!" 4350 0
+start 
+addenemy FlipperZombie -1 0,72 Flamethrower Right noflags FlipHorizontally
+endevent
+
+event "zombie!" 4400 0
+start 
+addenemy McBernickZombie 0,5 -1 ShotGun LeftAndRight noflags None
+addenemy McBernickZombie 0,5 1 RocketLauncher LeftAndRight noflags None
+endevent
+
+event "zombie!" 4450 0
+start 
+addenemy McBernickZombie 1 0,3 Flamethrower SmallUpAndDown noflags None
+addenemy McBernickZombie 1 0,7 RocketLauncher SmallUpAndDown noflags None
+endevent
+
+event "stopZ" 4500 0
+start 
+set poulpiStop
+endevent
+
+event "zombie!" 4550 0
+start 
+
+unset poulpiStop
+
+whilenot poulpiStop 3
+addenemy PoulpiZombie 0,3 -1 nobonus Down noflags FlipHorizontally
+addenemy PoulpiZombie 0,4 -1 nobonus Down noflags FlipHorizontally
+addenemy PoulpiZombie 0,5 -1 nobonus Down noflags FlipHorizontally
+addenemy PoulpiZombie 0,65 -1 nobonus Down noflags FlipHorizontally
+done
+
+endevent
+
+event "zombie!" 4555 0
+start 
+
+whilenot poulpiStop 3
+addenemy PoulpiZombie 0,25 1 nobonus Up noflags FlipHorizontally
+addenemy PoulpiZombie 0,35 1 nobonus Up noflags FlipHorizontally
+addenemy PoulpiZombie 0,45 1 nobonus Up noflags FlipHorizontally
+addenemy PoulpiZombie 0,55 1 nobonus Up noflags FlipHorizontally
+addenemy PoulpiZombie 0,65 1 nobonus Up noflags FlipHorizontally
+done
+
+endevent
+
+event "zombie!" 4560 0
+start 
+
+whilenot poulpiStop 2
+addenemy PoulpiZombie -1 -1 nobonus RightDownCorner noflags FlipHorizontally
+done
+
+endevent
+
+event "zombie!" 4565 0
+start 
+
+whilenot poulpiStop 2
+addenemy PoulpiZombie -1 1 nobonus RightUpCorner noflags FlipHorizontally
+done
+
+endevent
+
+event "zombie!" 4700 0
+start 
+addenemy McBernickZombie -1 0,5 ShotGun Right noflags FlipHorizontally
+endevent
+
+event "zombie!" 4750 0
+start 
+addenemy McBernickZombie -1 0,4 nobonus Right noflags FlipHorizontally
+endevent
+
+event "zombie!" 4800 0
+start 
+addenemy McBernickZombie -1 0,6 RocketLauncher Right noflags FlipHorizontally
+endevent
+
+event "stopZ" 6200 0
+start 
+set poulpiStop
+endevent
+
+event "zombie!" 6100 0
+start 
+addenemy McBernickZombie -1 0,7 nobonus Right noflags FlipHorizontally
+endevent
+
+event "zombie!" 6150 0
+start 
+addenemy McBernickZombie -1 0,7 ShotGun Right noflags FlipHorizontally
+endevent
+
+event "zombie!" 6200 0
+start 
+addenemy FlipperZombie -1 0,7 nobonus Right noflags FlipHorizontally
+endevent
+
+event "zombie!" 6300 0
+start 
+
+unset poulpiStop
+
+whilenot poulpiStop 2
+addenemy PoulpiZombie -1 0,3 nobonus Right noflags FlipHorizontally
+addenemy PoulpiZombie -1 0,5 nobonus Right noflags FlipHorizontally
+done
+
+endevent
+
+event "zombie!" 6400 0
+start 
+whilenot poulpiStop 2
+addenemy PoulpiZombie 0,3 1 nobonus Up noflags None
+addenemy PoulpiZombie 0,5 1 nobonus Up noflags None
+done
+endevent
+
+event "zombie!" 6250 0
+start 
+addenemy McBernickZombie -1 0,7 Megabomb Right noflags FlipHorizontally
+endevent
+
+event "zombie!" 6300 0
+start 
+addenemy FlipperZombie -1 0,7 nobonus Right noflags FlipHorizontally
+endevent
+
+event "zombie!" 6350 0
+start 
+addenemy McBernickZombie 1 0,7 nobonus Left noflags None
+endevent
+
+event "zombie!" 6450 0
+start 
+addenemy McBernickZombie 1 0,3 Life Left noflags None
+endevent
+
+event "stopZ" 6700 0
+start 
+set poulpiStop
+endevent
+
+event "boss_fin_de_niveau" 7000 0
+start 
+
+changemusic boss3Music "Lost" "Spintronic" 
+
+//Boss : Ariel
+addenemy Ariel -1 1 nobonus nopattern ArielKilled FlipHorizontally
+
+scrollspeed 1 0 0
+scrollspeed 2 0 0
+
+//Pop bonuses
+whilenot fini 50
+addrandombonus Weapon
+done
+
+endevent
+
+event "wait_a_little" 0 0
+start ArielKilled
+wait 3 endlevel
+endevent
+
+end

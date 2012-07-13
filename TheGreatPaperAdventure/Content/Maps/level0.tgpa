@@ -1,0 +1,411 @@
+version 1,0
+
+//Map infos
+level 0
+lastpart true
+name Level0Name
+desc Level0Desc
+
+//BG1
+bg1 Left 0 0 true
+bgpart level0/training_bg1_1
+bgpart level0/training_bg1_2
+bgpart level0/training_bg1_3
+bgpart level0/training_bg1_4
+
+//BG2
+bg2 Left 0 0 false
+bgpart level0/training_bg2_1
+bgpart level0/training_bg2_2
+bgpart level0/training_bg2_3
+bgpart vide
+bgpart vide
+bgpart vide
+bgpart level0/training_bg2_4
+
+//BG3
+bg3 Left 0 0 true
+bgpart vide
+
+
+//Init game
+init
+music level0Music "Edward the dwarf" "Spintronic"
+score 0
+lives 3
+weapon MachineGun
+location 100 300
+flip None
+winflag endlevel
+loseflag playersdie
+outDirection Right
+
+begin
+
+event "" 0 0
+start
+addbge CommandDisplayer 0 0 #Move
+endevent
+
+event "" 0 0
+start #Move
+addbge CommandDisplayer 0 0 #Fire
+endevent
+
+//Start the level by killing the trigger
+event "" 0 0
+start 
+addbge StartPanel 0,15 0,32
+set stopScroll1Enable
+scrollspeed 1 20 0
+scrollspeed 2 50 0
+scrollspeed 3 0 0
+endevent
+
+//First enemy : a cow... Stop scroll, it has to DIE
+event "" 80 0
+start 
+addenemy Cow 1 0,5 nobonus nopattern firstblood None
+endevent
+
+//Scroll off 'til its death
+event "" 200 0
+start stopScroll1Enable
+scrollspeed 1 0 0
+scrollspeed 2 0 0
+scrollspeed 3 0 0
+endevent
+
+//Scroll back on
+event "start" 80 0
+start firstblood
+unset stopScroll1Enable
+scrollspeed 1 20 0
+scrollspeed 2 40 0
+scrollspeed 3 0 0
+endevent
+
+event "" 120 0
+start 
+addenemy RandomCow 1 0,4 nobonus nopattern noflags FlipHorizontally
+endevent
+
+event "" 130 0
+start 
+addenemy RandomCow 1 0,8 nobonus nopattern noflags None
+endevent
+
+event "" 170 0
+start 
+addenemy RandomCow 1 0,6 nobonus nopattern noflags None
+endevent
+
+event "" 180 0
+start 
+addenemy RandomCow 1 0,8 nobonus nopattern noflags None
+addenemy RandomCow 1 0,5 nobonus nopattern noflags None
+endevent
+
+event "" 190 0
+start 
+addenemy RandomCow 1 0,7 nobonus nopattern noflags FlipHorizontally
+endevent
+
+event "" 230 0
+start 
+addenemy RandomCow 1 0,5 nobonus nopattern noflags None
+endevent
+
+event "" 250 0
+start 
+addenemy RandomCow 1 0,75 nobonus nopattern noflags None
+endevent
+
+event "" 275 0
+start 
+addenemy RandomCow 1 0,65 nobonus nopattern noflags None
+endevent
+
+event "" 280 0
+start 
+addenemy RandomCow 1 0,8 nobonus nopattern noflags None
+endevent
+
+event "" 300 0
+start 
+addenemy Cow 1 0,06 nobonus nopattern noflags None
+addenemy Cow 1 0,14 nobonus nopattern noflags None
+addenemy Cow 1 0,28 nobonus nopattern noflags None
+addenemy Cow 1 0,31 nobonus nopattern noflags None
+addenemy Cow 1 0,44 nobonus nopattern noflags None
+addenemy Cow 1 0,53 nobonus nopattern noflags None
+addenemy Cow 1 0,65 nobonus nopattern noflags None
+addenemy Cow 1 0,79 nobonus nopattern noflags None
+endevent
+
+event "" 350 0
+start 
+addbge CommandDisplayer 0 0 #Bomb
+addbomb
+addbomb
+addenemy Cow 1 0,03 nobonus nopattern noflags None
+addenemy Cow 1 0,19 nobonus nopattern noflags None
+addenemy Cow 1 0,24 nobonus nopattern noflags None
+addenemy Cow 1 0,32 nobonus nopattern noflags None
+addenemy Cow 1 0,46 nobonus nopattern noflags None
+addenemy Cow 1 0,77 nobonus nopattern noflags None
+addenemy Cow 1 0,64 nobonus nopattern noflags None
+endevent
+
+event "" 400 0
+start 
+addenemy Cow 1 0,08 nobonus nopattern noflags None
+addenemy Cow 1 0,11 nobonus nopattern noflags None
+addenemy Cow 1 0,23 nobonus nopattern noflags None
+addenemy Cow 1 0,36 nobonus nopattern noflags None
+addenemy Cow 1 0,49 nobonus nopattern noflags None
+addenemy Cow 1 0,66 nobonus nopattern groupkill None
+addenemy Cow 1 0,73 nobonus nopattern noflags None
+set stopScroll2Enable
+endevent
+
+//Scroll off 'til they die
+event "" 500 0
+start stopScroll2Enable
+scrollspeed 1 0 0
+scrollspeed 2 0 0
+scrollspeed 3 0 0
+endevent
+
+//Scroll back on
+event "start" 400 0
+start groupkill
+unset stopScroll2Enable
+scrollspeed 1 20 0
+scrollspeed 2 40 0
+scrollspeed 3 0 0
+endevent
+
+event "" 440 0
+start 
+addenemy RandomCow 1 0,8 nobonus nopattern noflags None
+endevent
+
+event "" 460 0
+start 
+addenemy RandomCow 1 0,6 nobonus nopattern noflags None
+endevent
+
+event "" 480 0
+start 
+addenemy RandomCow 1 0,65 nobonus nopattern noflags None
+endevent
+
+event "" 490 0
+start 
+addenemy RandomCow 1 0,75 nobonus nopattern noflags None
+endevent
+
+event "" 510 0
+start 
+addenemy RandomCow 1 0,7 nobonus nopattern noflags None
+endevent
+
+//Cow with bonus
+event "" 525 0
+start 
+set stopScroll3Enable
+addenemy Cow 1 0,7 Flamethrower nopattern bonusdropped None
+addenemy Cow 1 0,5 Megabomb nopattern bonusdropped None
+endevent
+
+event "" 725 0
+start stopScroll3Enable
+scrollspeed 1 0 0
+scrollspeed 2 0 0
+scrollspeed 3 0 0
+endevent
+
+event "" 550 0
+start bonusdropped
+unset stopScroll3Enable
+scrollspeed 1 25 0
+scrollspeed 2 80 0
+scrollspeed 3 0 0
+endevent
+
+event "" 600 0
+start bonusdropped
+scrollspeed 1 45 0
+scrollspeed 2 100 0
+endevent
+
+event "" 800 0
+start 
+addenemy CowLauncher 0,9 -1 nobonus nopattern noflags None
+endevent
+
+event "" 950 0
+start 
+addenemy CowLauncher 0,9 -1 nobonus nopattern noflags None
+endevent
+
+event "" 1100 0
+start
+scrollspeed 1 25 0
+scrollspeed 2 80 0
+endevent
+
+event "" 1100 0
+start 
+addenemy CowLauncher 0,9 -1 nobonus nopattern noflags None
+endevent
+
+event "" 1400,0 0,0
+start 
+addenemy Trainee 1,0 0,2 nobonus SmallUpAndDown noflags None
+endevent
+
+event "" 1450,0 0,0
+start 
+addenemy Trainee 1,0 0,2 nobonus SmallUpAndDown noflags None
+addenemy Trainee 1,0 0,8 nobonus SmallUpAndDown noflags None
+endevent
+
+event "" 1500 0,0
+start 
+addenemy CowLauncher 1 -1 nobonus nopattern noflags None
+endevent
+
+event "" 1550,0 0,0
+start 
+addenemy Trainee 1,0 0,4 nobonus SmallLace noflags None
+addenemy Trainee 1,0 0,6 nobonus SmallLace noflags None
+endevent
+
+event "" 1650,0 0,0
+start 
+addenemy Trainee -1,0 0,8 nobonus Right noflags FlipHorizontally
+addenemy Trainee -1,0 0,4 nobonus Right noflags FlipHorizontally
+endevent
+
+event "" 1750,0 0,0
+start 
+addenemy Trainee 1,0 0,8 nobonus SmallUpAndDown noflags None
+addenemy Trainee 1,0 0,4 nobonus SmallUpAndDown noflags None
+endevent
+
+event "" 1750,0 0,0
+start 
+addenemy Trainee 1,0 0,5 nobonus BigUpAndDown noflags None
+endevent
+
+event "" 1800,0 0,0
+start 
+addenemy Trainee 1,0 0,6 nobonus BigUpAndDown noflags None
+endevent
+
+event "" 1850,0 0,0
+start 
+addenemy Trainee 1,0 0,7 nobonus BigUpAndDown noflags None
+endevent
+
+event "" 1870 0
+start 
+addenemy CowLauncher 0,9 -1 nobonus nopattern noflags None
+endevent
+
+event "" 1900,0 0,0
+start 
+addenemy Trainee 1,0 0,4 nobonus BigUpAndDown noflags None
+endevent
+
+event "" 1950,0 0,0
+start 
+addenemy Trainee 1,0 0,1 nobonus BigUpAndDown noflags None
+addenemy Trainee 1,0 0,9 nobonus BigUpAndDown noflags None
+addenemy Trainee 0 0,4 nobonus SmallUpAndDown noflags FlipHorizontally
+endevent
+
+event "" 2025 0,0
+start 
+addenemy Cow 1 0,73 MachineGun nopattern bonusplusplus None
+endevent
+
+event "" 2050 0,0
+start 
+addenemy Cow 1 0,73 MachineGun nopattern bonusplusplus None
+endevent
+
+event "" 2100 0,0
+start 
+addenemy Caca 1 0,93 nobonus nopattern bonusplusplus None
+endevent
+
+event "" 2120 0,0
+start 
+addenemy Caca 1 0,93 nobonus nopattern bonusplusplus None
+endevent
+
+event "" 2140 0,0
+start 
+addenemy Caca 1 0,93 nobonus nopattern bonusplusplus None
+endevent
+
+event "" 2150 0,0
+start 
+addenemy Trainee -1 0,2 nobonus Right noflags FlipHorizontally
+addenemy Trainee -1 0,5 nobonus Right noflags FlipHorizontally
+endevent
+
+event "" 2300 0,0
+start 
+addenemy Trainee 1,0 0,1 nobonus BigUpAndDown noflags None
+addenemy Trainee 1,0 0,8999999 nobonus BigUpAndDown noflags None
+addenemy Trainee 0 0,4 nobonus SmallUpAndDown noflags FlipHorizontally
+endevent
+
+event "" 2400 0,0
+start 
+addenemy Trainee 0,5 -1 nobonus Down noflags None
+addenemy Trainee 0,6 -1 nobonus Down noflags None
+addenemy Trainee 0,7 -1 nobonus Down noflags None
+addenemy Trainee 0,8 -1 nobonus Down noflags None
+addenemy Trainee 0,9 -1 nobonus Down noflags None
+endevent
+
+event "" 2500 0,0
+start 
+addenemy Trainee 0,5 1 nobonus Up noflags None
+addenemy Trainee 0,6 1 nobonus Up noflags None
+addenemy Trainee 0,7 1 nobonus Up noflags None
+addenemy Trainee 0,8 1 nobonus Up noflags None
+addenemy Trainee 0,9 1 nobonus Up noflags None
+endevent
+
+event "" 2600 0,0
+start 
+addenemy Trainee -1 -1 nobonus RightDownCorner noflags None
+addenemy Trainee 1 -1 nobonus LeftDownCorner noflags None
+addenemy Trainee -1 1 nobonus RightUpCorner noflags None
+addenemy Trainee 1 1 nobonus LeftUpCorner noflags None
+endevent
+
+event "" 2725 0,0
+start 
+addenemy Trainee 1 0,3 nobonus Left noflags None
+addenemy Trainee 1 0,5 nobonus Left noflags None
+addenemy Trainee 1 0,7 nobonus Left noflags None
+addenemy Trainee -1 0,2 nobonus Right noflags FlipHorizontally
+addenemy Trainee -1 0,4 nobonus Right noflags FlipHorizontally
+addenemy Trainee -1 0,6 nobonus Right noflags FlipHorizontally
+addenemy Trainee -1 0,8 nobonus Right noflags FlipHorizontally
+endevent
+
+event "" 2900 0,0
+start
+wait 3 endlevel
+endevent
+
+end
+

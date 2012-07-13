@@ -1,0 +1,440 @@
+version 1,0
+
+level 2
+lastpart true
+name Level2_2Name
+desc Level2Part2Desc
+
+bg1 Down 0 60 True
+bgpart level2/part2/lvl2_2_bg1_1
+
+bg2 Down 0 70 True
+bgpart vide
+bgpart vide
+bgpart level2/part2/lvl2_2_bg2_1
+bgpart vide
+
+bg3 Down 0 80 True
+bgpart level2/part2/lvl2_2_bg3_1
+
+init
+music level2_2Music "Zombie's salad" "Spintronic" 
+score 0
+lives 5
+weapon MachineGun
+location 150 150
+flip None
+winflag endlevel
+loseflag playersdie
+outDirection Up
+
+begin
+
+//Walls
+//***************************
+event "Walls" 0 0
+start 
+addbge BGHitbox 0 0 Left
+addbge BGHitbox 0,9375 0 Right
+endevent
+
+//Enemies
+//***************************
+event "" 0 150
+start 
+addenemy Pepito 1 0,3 nobonus Left noflags None
+endevent
+
+event "" 0 200
+start 
+addenemy Pepito 1 0,4 nobonus Left noflags None
+endevent
+
+event "" 0 250
+start 
+addenemy Pepito 1 0,5 nobonus Left noflags None
+endevent
+
+event "" 0 450
+start 
+addenemy Pepito -1 0,3 nobonus Right noflags FlipHorizontally
+endevent
+
+event "" 0 500
+start 
+addenemy Pepito -1 0,7 nobonus Right noflags FlipHorizontally
+endevent
+
+event "" 0 550
+start 
+addenemy Pepito -1 0,8 nobonus Right noflags FlipHorizontally
+endevent
+
+event "" 0 700
+start 
+addenemy PoulpiMexico -1 0,1 nobonus SmallV noflags FlipHorizontally
+endevent
+
+event "" 0 750
+start 
+addenemy PoulpiMexico 1 0,6 nobonus SmallV noflags None
+endevent
+
+event "" 0 800
+start 
+addenemy PoulpiMexico 1 0,9 nobonus SmallV noflags None
+endevent
+
+event "" 0 850
+start 
+addenemy PoulpiMexico 1 0,2 MachineGun SmallV noflags None
+endevent
+
+event "" 0 900
+start 
+addenemy PoulpiMexico -1 0,5 nobonus SmallV noflags FlipHorizontally
+endevent
+
+event "" 0 950
+start 
+addenemy PoulpiMexico 1 0,7 nobonus Left noflags None
+endevent
+
+event "" 0 1000
+start 
+addenemy PoulpiMexico -1 0,75 nobonus Left noflags FlipHorizontally
+endevent
+
+event "" 0 1100
+start 
+addenemy Rock 0,3 -1 nobonus nopattern noflags None
+endevent
+
+event "" 0 1200
+start 
+addenemy Rock 0,8 -1 nobonus nopattern noflags None
+endevent
+
+event "" 0 1300
+start 
+addenemy Rock 0,4 -1 Life nopattern noflags None
+endevent
+
+event "" 0 1350
+start 
+addenemy Rock 0,2 -1 nobonus nopattern noflags None
+endevent
+
+event "" 0 1450
+start 
+addenemy Pepito 0,6 -1 Flamethrower Down noflags None
+endevent
+
+event "" 0 1500
+start 
+addenemy Pepito 0,7 -1 nobonus Down noflags None
+endevent
+
+event "" 0 1550
+start 
+addenemy Pepito 0,8 -1 nobonus Down noflags None
+endevent
+
+event "" 0 1575
+start 
+addenemy Pepito 0,4 -1 nobonus Down noflags FlipHorizontally
+endevent
+
+event "" 0 1625
+start 
+addenemy Pepito 0,3 -1 nobonus Down noflags FlipHorizontally
+endevent
+
+event "" 0 1675
+start 
+addenemy Pepito 0,2 -1 nobonus Down noflags FlipHorizontally
+endevent
+
+event "" 0 1800
+start 
+addenemy PoulpiMexico 0,5 1 nobonus LeftAndRight noflags None
+endevent
+
+event "" 0 1850
+start 
+addenemy PoulpiMexico 0,5 1 nobonus LeftAndRight noflags None
+endevent
+
+event "" 0 1900
+start 
+addenemy PoulpiMexico 0,5 1 nobonus LeftAndRight noflags None
+endevent
+
+event "" 0 1950
+start 
+addenemy PoulpiMexico 0,5 1 nobonus LeftAndRight noflags None
+endevent
+
+event "" 0 2000
+start 
+addenemy Pepito 0,1 -1 nobonus RightDownCorner noflags FlipHorizontally
+endevent
+
+event "" 0 2050
+start 
+addenemy Rock 0,7 -1 nobonus nopattern noflags None
+endevent
+
+event "" 0 2100
+start 
+addenemy Pepito 0,9 1 nobonus LeftUpCorner noflags FlipHorizontally
+endevent
+
+event "" 0 2150
+start 
+addenemy Rock 0,3 -1 nobonus nopattern noflags None
+addenemy Rock 0,8 -1 nobonus nopattern noflags None
+endevent
+
+event "" 0 2200
+start 
+addenemy Pepito 0,1 -1 nobonus RightDownCorner noflags FlipHorizontally
+endevent
+
+event "" 0 2250
+start 
+addenemy Rock 0,5 -1 nobonus nopattern noflags None
+endevent
+
+event "" 0 2300
+start 
+addenemy Pepito 0,9 1 nobonus LeftUpCorner noflags FlipHorizontally
+endevent
+
+event "" 0 2350
+start 
+addenemy Rock 0,67 -1 nobonus nopattern noflags None
+endevent
+
+event "" 0 2400
+start 
+addenemy Pepito 0,1 -1 MachineGun RightDownCorner noflags FlipHorizontally
+endevent
+
+event "" 0 2450
+start 
+addenemy Rock 0,89 -1 nobonus nopattern noflags None
+addenemy Rock 0,23 -1 nobonus nopattern noflags None
+endevent
+
+event "" 0 2500
+start 
+addenemy Pepito 0,9 1 nobonus LeftUpCorner noflags FlipHorizontally
+endevent
+
+event "" 0 2550
+start 
+addenemy Rock 0,10 -1 nobonus nopattern noflags None
+addenemy Rock 0,60 -1 nobonus nopattern noflags None
+endevent
+
+event "" 0 2750
+start 
+addenemy PoulpiMexico 0,3 -1 nobonus Down noflags None
+addenemy PoulpiMexico 0,8 -1 nobonus Down noflags None
+endevent
+
+event "" 0 2850
+start 
+addenemy PoulpiMexico 0,8 -1 nobonus Down noflags None
+addenemy PoulpiMexico 0,3 -1 nobonus Down noflags None
+endevent
+
+event "" 0 2950
+start 
+addenemy Rock 0,50 -1 nobonus nopattern noflags None
+endevent
+
+event "" 0 3000
+start 
+addenemy Rock 0,45 -1 nobonus nopattern noflags None
+endevent
+
+event "" 0 3050
+start 
+addenemy Rock 0,65 -1 nobonus nopattern noflags None
+endevent
+
+event "" 0 3200
+start 
+addenemy PoulpiMexico 0,37 1 nobonus Up noflags None
+addenemy PoulpiMexico 0,63 1 Megabomb Up noflags FlipHorizontally
+addenemy Rock 0,2 -1 nobonus nopattern noflags None
+endevent
+
+event "" 0 3250
+start 
+addenemy PoulpiMexico 0,37 1 nobonus Up noflags None
+addenemy PoulpiMexico 0,63 1 nobonus Up noflags FlipHorizontally
+addenemy Rock 0,8 -1 nobonus nopattern noflags None
+endevent
+
+event "" 0 3300
+start 
+addenemy PoulpiMexico 0,37 1 nobonus Up noflags None
+addenemy PoulpiMexico 0,63 1 nobonus Up noflags FlipHorizontally
+addenemy Rock 0,7 -1 nobonus nopattern noflags None
+endevent
+
+event "" 0 3350
+start 
+addenemy PoulpiMexico 0,37 1 nobonus Up noflags None
+addenemy PoulpiMexico 0,63 1 nobonus Up noflags FlipHorizontally
+addenemy Rock 0,3 -1 nobonus nopattern noflags None
+endevent
+
+event "" 0 3400
+start 
+addenemy PoulpiMexico 0,37 1 Life Up noflags None
+addenemy PoulpiMexico 0,63 1 nobonus Up noflags FlipHorizontally
+addenemy Rock 0,15 -1 nobonus nopattern noflags None
+addenemy Rock 0,85 -1 nobonus nopattern noflags None
+endevent
+
+event "" 0 3450
+start 
+addenemy PoulpiMexico 0,37 1 nobonus Up noflags None
+addenemy PoulpiMexico 0,63 1 MachineGun Up noflags FlipHorizontally
+addenemy Rock 0,7 -1 nobonus nopattern noflags None
+endevent
+
+event "" 0 3500
+start 
+addenemy PoulpiMexico 0,37 1 nobonus Up noflags None
+addenemy PoulpiMexico 0,63 1 nobonus Up noflags FlipHorizontally
+addenemy Rock 0,8 -1 nobonus nopattern noflags None
+endevent
+
+event "" 0 3550
+start 
+addenemy PoulpiMexico 0,37 1 nobonus Up noflags None
+addenemy PoulpiMexico 0,63 1 nobonus Up noflags FlipHorizontally
+endevent
+
+event "" 0 3600
+start 
+addenemy PoulpiMexico 0,37 1 nobonus Up noflags None
+addenemy PoulpiMexico 0,63 1 nobonus Up noflags FlipHorizontally
+addenemy Rock 0,2 -1 nobonus nopattern noflags None
+addenemy Rock 0,3 -1 nobonus nopattern noflags None
+addenemy Rock 0,7 -1 nobonus nopattern noflags None
+addenemy Rock 0,8 -1 nobonus nopattern noflags None
+endevent
+
+event "" 0 3800
+start 
+addenemy PoulpiMexico 0,37 1 nobonus RightUpCorner noflags FlipHorizontally
+addenemy PoulpiMexico 0,63 1 nobonus LeftUpCorner noflags None
+endevent
+
+event "" 0 3900
+start 
+addenemy Pepito 0,7 1 nobonus Up noflags noflags
+endevent
+
+event "" 0 3950
+start 
+addenemy Pepito 0,75 1 nobonus Up noflags noflags
+endevent
+
+event "" 0 4000
+start 
+addenemy Pepito 0,65 1 MachineGun Up noflags noflags
+endevent
+
+//Speed !!!
+//********************************
+event "scroll++" 0 4520
+start 
+scrollspeed 1 0 100
+scrollspeed 2 0 100
+endevent
+
+event "scroll++" 0 4580
+start 
+scrollspeed 1 0 150
+scrollspeed 2 0 170
+endevent
+
+event "scroll++" 0 4650
+start 
+scrollspeed 1 0 250
+scrollspeed 2 0 280
+endevent
+
+event "scroll++" 0 4730
+start 
+scrollspeed 1 0 350
+scrollspeed 2 0 390
+endevent
+
+event "scroll++" 0 4890
+start 
+scrollspeed 1 0 450
+scrollspeed 2 0 500
+endevent
+
+event "scroll++" 0 4900
+start 
+scrollspeed 1 0 600
+scrollspeed 2 0 650
+endevent
+
+event "scroll--" 0 24000
+start 
+scrollspeed 1 0 300
+scrollspeed 2 0 350
+endevent
+
+event "scroll--" 0 24500
+start 
+scrollspeed 1 0 100
+scrollspeed 2 0 150
+endevent
+
+//Boss
+//***************************
+event "boss" 0 25000
+start 
+
+changemusic boss2Music "Robots on the dancefloor [Cookiefied]" "Spintronic" 
+
+//Boss : Pamp...Cactus !
+addenemy ElFeroCactae 0,5 0,6 nobonus nopattern PAMPAkilled None
+
+//Stop scrolling 
+scrollspeed 1 0 0
+scrollspeed 2 0 0
+scrollspeed 3 0 0
+
+//Pop bonuses
+whilenot fini 30
+addrandombonus Weapon
+done
+
+endevent
+
+event "wait_a_little" 0 0
+start PAMPAkilled
+wait 3 endlevel
+endevent
+
+
+//Randomly generated falling rocks
+//************************************
+event "RandomRocks" 0 4150
+start
+addenemy RockLauncher 0,5 0,5 nobonus nopattern noflags None
+endevent
+
+end

@@ -1,0 +1,60 @@
+version 1,0
+
+//Map infos
+level 42
+lastpart true
+name BonusLevel1_3Name
+desc BonusLevel1_3Desc
+
+//BG1
+bg1 Left 50 0 True
+bgpart levelb1/part1/lvlb1_1_bg1_1
+
+
+//BG2
+bg2 Left 100 0 True
+bgpart vide
+bgpart levelb1/part1/lvlb1_1_bg2_2
+
+//BG3
+bg3 Left 300 0 True
+bgpart vide
+bgpart levelb1/part1/lvlb1_1_bg3_1
+
+//Init game
+init
+music 
+score 0
+lives 5
+weapon MachineGun
+location 50 300
+flip None
+winflag endlevel
+loseflag playersdie
+outDirection Right
+
+begin
+
+//Boss
+//************************************************************************
+event "boss_fin_de_niveau" 100 0
+start 
+
+changemusic levelb1_2Music "Empire of Madness" "Spintronic" 
+
+//Boss : KingPoulpy
+addenemy KingPoulpi 1 0,4 nobonus nopattern bossKilled None
+
+//Stop scrolling
+scrollspeed 1 0 0
+scrollspeed 2 0 0
+scrollspeed 3 0 0
+
+endevent
+
+event "wait_a_little" 10 0
+start bossKilled
+wait 3 endlevel
+endevent
+
+end

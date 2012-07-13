@@ -1,0 +1,527 @@
+version 1,0
+
+//Map infos
+level 4
+lastpart true
+name Level4_2Name
+desc Level4_2Desc
+
+//BG1
+bg1 Left 32 0 True
+bgpart level4/lvl4_bg1_1
+bgpart level4/lvl4_bg1_2
+
+//BG2
+bg2 Left 50 0 False
+bgpart level4/lvl4_2_bg2_1
+bgpart level4/lvl4_2_bg2_2
+bgpart level4/lvl4_2_bg2_3
+bgpart level4/lvl4_2_bg2_4
+bgpart level4/lvl4_2_bg2_5
+bgpart level4/lvl4_2_bg2_6
+bgpart level4/lvl4_2_bg2_7
+bgpart level4/lvl4_2_bg2_8
+bgpart level4/lvl4_2_bg2_9
+
+//BG3 : Clouds
+bg3 Left 300 0 True
+bgpart level4/neige_bg3
+
+//Init game
+init
+music level4_2Music "Bubblecrusher" "Spintronic" 
+score 0
+lives 5
+weapon MachineGun
+location 50 300
+flip None
+winflag endlevel
+loseflag playersdie
+outDirection Right
+
+begin
+
+event "" 10 0
+start 
+addenemy PoulpiFrozen 1,0 0,8 nobonus nopattern noflags None
+endevent
+
+event "" 100 0
+start 
+addenemy PoulpiSnow 1,0 0,3 nobonus Left noflags None
+endevent
+
+event "" 130 0
+start 
+addenemy PoulpiSnow 1,0 0,4 nobonus Left noflags None
+endevent
+
+event "" 160 0
+start 
+addenemy PoulpiSnow 1,0 0,5 nobonus Left noflags None
+endevent
+
+event "" 190 0
+start 
+addenemy PoulpiSnow 1,0 0,3 nobonus Left noflags None
+endevent
+
+event "" 240 0
+start 
+addenemy PoulpiSnow 1,0 0,5 nobonus LeftDownCorner noflags None
+endevent
+
+event "" 250 0
+start 
+addenemy PoulpiSnow -1,0 0,8 ShotGun Right noflags FlipHorizontally
+endevent
+
+event "" 350 0
+start 
+addenemy PoulpiSnow 1,0 0,5 nobonus LeftDownCorner noflags None
+endevent
+
+event "" 375 0
+start 
+addenemy PoulpiSnow -1,0 0,2 nobonus Right noflags FlipHorizontally
+endevent
+
+event "" 380 0
+start 
+addenemy PoulpiFrozen 1,0 0,8 nobonus nopattern noflags None
+endevent
+
+event "" 450 0
+start 
+addenemy PoulpiSnow 0,4 -1 nobonus Down noflags None
+addenemy PoulpiSnow 0,5 -1 nobonus Down noflags None
+addenemy PoulpiSnow 0,6 -1 nobonus Down noflags None
+endevent
+
+event "" 500 0
+start 
+addenemy PoulpiSnow 0,6 -1 nobonus Down noflags None
+addenemy PoulpiSnow 0,7 -1 nobonus Down noflags None
+addenemy PoulpiSnow 0,8 -1 nobonus Down noflags None
+endevent
+
+event "" 390 0
+start 
+addenemy PoulpiSnow 0,8 -1 nobonus Down noflags None
+addenemy PoulpiSnow 0,9 -1 nobonus Down noflags None
+addenemy PoulpiSnow 0,2 -1 nobonus Down noflags FlipHorizontally
+endevent
+
+event "" 450 0
+start 
+addenemy PoulpiFrozen 1,0 0,8 nobonus nopattern noflags None
+endevent
+
+event "" 550 0
+start 
+addenemy Yeti 1 0,8 MachineGun Left noflags None
+endevent
+
+event "" 600 0
+start 
+addenemy Yeti 1 0,8 MachineGun Left noflags None
+endevent
+
+event "" 600 0
+start 
+whilenot pingouin1 2
+addenemy Pingouin 1 0,8 nobonus Left noflags None
+done
+endevent
+
+event "" 620 0
+start 
+whilenot pingouin1 1
+addenemy PoulpiSnow 1 0,3 nobonus BigUpAndDown noflags None
+addenemy PoulpiSnow 1 0,8 nobonus BigUpAndDown noflags None
+done
+endevent
+
+event "" 750 0
+start 
+addenemy PoulpiSnow -1 0,3 ShotGun Right noflags FlipHorizontally
+endevent
+
+event "" 900 0
+start 
+set pingouin1
+endevent
+
+event "" 950 0
+start launcher1
+unset scroll1
+scrollspeedreset 1
+scrollspeedreset 2
+endevent
+
+event "" 1000 0
+start 
+addenemy PingouinLauncher 1 0,7 Megabomb Left launcher1 None
+set scroll1
+
+whilenot launcher1 3
+addenemy PoulpiSnow 1 -1 nobonus LeftDownCorner noflags None
+done
+
+whilenot launcher1 5
+addenemy PoulpiSnow -1 -1 nobonus RightDownCorner noflags None
+done
+
+endevent
+
+event "" 1050 0
+start 
+
+whilenot launcher1 2
+addenemy PoulpiSnow -1 -1 nobonus RightDownCorner noflags None
+done
+
+endevent
+
+event "" 1300 0
+start scroll1
+scrollspeed 1 0 0
+scrollspeed 2 0 0
+endevent
+
+event "" 1350 0
+start 
+addenemy PoulpiFrozen 1 0,8 MachineGun Left noflags None
+
+whilenot pingouin2 3
+addenemy Pingouin 1 0,7 nobonus Left noflags None
+done
+
+endevent
+
+event "" 1350 0
+start 
+addenemy PoulpiSnow 1 0,2 nobonus Left noflags None
+
+whilenot pingouin2 2
+addenemy Pingouin 1 0,3 nobonus Left noflags None
+done
+
+endevent
+
+event "" 1450 0
+start 
+addenemy PoulpiSnow 1 0,3 nobonus Left noflags None
+endevent
+
+event "" 1550 0
+start 
+addenemy PoulpiSnow 1 0,4 nobonus Left noflags None
+addenemy PoulpiSnow 1 0,2 nobonus Left noflags None
+endevent
+
+event "" 1650 0
+start 
+addenemy PoulpiSnow 1 0,3 nobonus Left noflags None
+addenemy PoulpiSnow 1 0,4 nobonus Left noflags None
+endevent
+
+event "" 1750 0
+start 
+addenemy PoulpiSnow 1 0,5 nobonus Left noflags None
+addenemy PoulpiSnow 1 0,6 nobonus Left noflags None
+endevent
+
+event "" 1800 0
+start 
+addenemy PoulpiSnow -1 0,2 nobonus Right noflags None
+endevent
+
+event "" 1850 0
+start 
+addenemy PoulpiSnow -1 0,3 nobonus Right noflags None
+endevent
+
+event "" 1900 0
+start 
+addenemy PoulpiSnow -1 0,2 nobonus Right noflags None
+endevent
+
+event "" 1950 0
+start 
+addenemy PoulpiSnow -1 0,3 MachineGun Right noflags None
+endevent
+
+event "" 2250 0
+start 
+set pingouin2
+addenemy Yeti 1 0,3 nobonus SmallLace noflags None
+endevent
+
+event "" 2300 0
+start 
+addenemy Yeti 1 0,5 nobonus SmallLace noflags None
+endevent
+
+event "" 2350 0
+start 
+addenemy Yeti 1 0,7 ShotGun SmallLace noflags None
+endevent
+
+event "" 2400 0
+start 
+addenemy Yeti 1 0,6 nobonus SmallLace noflags None
+endevent
+
+event "" 2400 0
+start 
+whilenot poulpi2 3
+addenemy PoulpiSnow 0,5 -1 nobonus LeftAndRight noflags None
+done
+endevent
+
+event "" 2450 0
+start 
+addenemy PoulpiFrozen 1 0,8 nobonus Left noflags None
+endevent
+
+event "" 2600 0
+start 
+addenemy PoulpiFrozen 1 0,8 nobonus Left noflags None
+endevent
+
+event "" 2700 0
+start 
+addenemy PoulpiFrozen 1 0,8 MachineGun Left noflags None
+endevent
+
+event "" 2750 0
+start 
+whilenot poulpi2 3
+addenemy PoulpiSnow 1 0,3 nobonus Left noflags None
+done
+endevent
+
+event "" 2800 0
+start 
+whilenot poulpi2 3
+addenemy PoulpiSnow 1 0,7 nobonus Left noflags None
+done
+endevent
+
+event "" 2800 0
+start 
+addenemy PoulpiFrozen 1 0,8 nobonus Left noflags None
+endevent
+
+event "" 2850 0
+start 
+addenemy PoulpiSnow -1 0,5 nobonus SmallUpandDown noflags FlipHorizontally
+endevent
+
+event "" 2900 0
+start 
+addenemy PoulpiFrozen 1 0,8 MachineGun Left noflags None
+endevent
+
+event "" 2900 0
+start 
+addenemy PoulpiSnow 0,4 -1 nobonus LeftAndRight noflags None
+endevent
+
+event "" 2950 0
+start 
+addenemy PoulpiSnow 0,9 -1 ShotGun LeftAndRight noflags None
+endevent
+
+event "" 3000 0
+start 
+addenemy PoulpiSnow 0,3 -1 nobonus LeftAndRight noflags None
+
+whilenot pingouin3 3
+addenemy Pingouin 1 0,4 nobonus Left noflags None
+done
+
+endevent
+
+event "" 3100 0
+start 
+
+whilenot pingouin3 3
+addenemy Pingouin 1 0,7 nobonus Left noflags None
+done
+
+endevent
+
+event "" 3200 0
+start 
+set poulpi2
+addenemy Yeti 1 0,7 nobonus Left noflags None
+endevent
+
+event "" 3300 0
+start 
+addenemy Yeti 1 0,3 nobonus Left noflags None
+endevent
+
+event "" 3350 0
+start 
+whilenot poulpi1 4
+addenemy PoulpiFrozen 1 0,8 nobonus nopattern noflags None
+done
+endevent
+
+event "" 3450 0
+start 
+whilenot poulpi1 3
+addenemy PoulpiSnow 1 0,2 nobonus SmallUpAndDown noflags None
+addenemy PoulpiSnow 1 0,3 nobonus SmallUpAndDown noflags None
+done
+endevent
+
+event "" 3550 0
+start 
+whilenot poulpi1 8
+addenemy PoulpiSnow 1 0,4 nobonus SmallUpAndDown noflags None
+addenemy PoulpiSnow 1 0,5 nobonus SmallUpAndDown noflags None
+done
+endevent
+
+event "" 3650 0
+start 
+whilenot poulpi1 9
+addenemy PoulpiSnow -1 0,4 nobonus SmallUpAndDown noflags FlipHorizontally
+addenemy PoulpiSnow -1 0,5 nobonus SmallUpAndDown noflags FlipHorizontally
+done
+endevent
+
+event "" 3700 0
+start 
+addenemy Yeti -1 0,2 nobonus SmallLace noflags FlipHorizontally
+endevent
+
+event "" 3800 0
+start 
+set pingouin3
+endevent
+
+event "" 3800 0
+start launcher2
+unset scroll2
+scrollspeedreset 1
+scrollspeedreset 2
+endevent
+
+event "" 3850 0
+start 
+set poulpi1
+addenemy PingouinLauncher 1 0,7 Life nopattern launcher2 None
+set scroll2
+
+whilenot launcher2 5
+addenemy PoulpiSnow 0,7 -1 nobonus LeftAndRight noflags None
+done
+
+endevent
+
+event "" 3850 0
+start 
+whilenot launcher2 4
+addenemy PoulpiSnow 0,8 -1 nobonus Down noflags None
+done
+endevent
+
+event "" 4150 0
+start scroll2
+scrollspeed 1 0 0
+scrollspeed 2 0 0
+endevent
+
+event "" 4050 0
+start 
+whilenot poulpi3 2
+addenemy PoulpiSnow 0,4 -1 nobonus Down noflags None
+done
+endevent
+
+event "" 4100 0
+start 
+whilenot poulpi3 3
+addenemy PoulpiSnow 0,7 1 nobonus Up noflags None
+done
+endevent
+
+event "" 4150 0
+start 
+whilenot poulpi3 4
+addenemy PoulpiSnow -1 0,1 nobonus Right noflags FlipHorizontally
+done
+endevent
+
+event "" 4200 0
+start 
+whilenot poulpi3 3
+addenemy PoulpiSnow 0,6 -1 nobonus Down noflags None
+addenemy PoulpiSnow 0,9 -1 nobonus Down noflags None
+done
+endevent
+
+event "" 4300 0
+start 
+addenemy Yeti 0,8 -1 MachineGun Down noflags None
+endevent
+
+event "" 4600 0
+start 
+addenemy Yeti 0,8 -1 ShotGun Down noflags None
+endevent
+
+event "" 4550 0
+start 
+whilenot poulpi3 4
+addenemy PoulpiSnow 0,8 -1 nobonus Down noflags None
+done
+addenemy PoulpiFrozen 1 0,8 MachineGun nopattern noflags None
+endevent
+
+event "" 4600 0
+start 
+whilenot poulpi3 3
+addenemy PoulpiSnow 0,8 -1 nobonus Up noflags None
+done
+endevent
+
+event "" 4700 0
+start 
+addenemy PoulpiSnow 0,8 -1 Life Up noflags None
+endevent
+
+event "" 4750 0
+start 
+set poulpi3
+endevent
+
+event "boss_fin_de_niveau" 5100 0 
+start 
+
+changemusic boss4Music "Soyuz computer" "Spintronic" 
+
+//Boss : Esquimo
+addenemy Esquimo 1 0,2 nobonus nopattern EquimoKilled None
+
+scrollspeed 1 0 0
+scrollspeed 2 0 0
+
+//Pop bonuses
+whilenot fini 25
+addrandombonus Weapon
+done
+
+endevent
+
+event "wait_a_little" 0 0
+start EquimoKilled
+wait 3 endlevel
+endevent
+
+end

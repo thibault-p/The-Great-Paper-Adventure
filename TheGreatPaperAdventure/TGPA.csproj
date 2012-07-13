@@ -1,0 +1,374 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <ProjectGuid>{F1043949-D09D-4CD4-BBEC-6B8CCE7683C0}</ProjectGuid>
+    <ProjectTypeGuids>{6D335F3A-9D43-41b4-9D22-F6F17C4BE596};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>TGPA</RootNamespace>
+    <AssemblyName>The Great Paper Adventure</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <XnaFrameworkVersion>v4.0</XnaFrameworkVersion>
+    <XnaPlatform>Windows</XnaPlatform>
+    <XnaCrossPlatformGroupID>4b8fee48-0dd5-4d53-a304-744ac4895efa</XnaCrossPlatformGroupID>
+    <ApplicationIcon>Game.ico</ApplicationIcon>
+    <Thumbnail>GameThumbnail.png</Thumbnail>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <ManifestCertificateThumbprint>41B3D5FCDE90160FB1EA3F120A6C7C43A32ED89A</ManifestCertificateThumbprint>
+    <ManifestKeyFile>TheGreatPaperAdventure_TemporaryKey.pfx</ManifestKeyFile>
+    <GenerateManifests>true</GenerateManifests>
+    <SignManifests>false</SignManifests>
+    <StartupObject>TGPA.Program</StartupObject>
+    <SignAssembly>false</SignAssembly>
+    <AssemblyOriginatorKeyFile>
+    </AssemblyOriginatorKeyFile>
+    <TargetZone>LocalIntranet</TargetZone>
+    <ApplicationManifest>Properties\app.manifest</ApplicationManifest>
+    <XnaUpgrade>
+    </XnaUpgrade>
+    <XnaOutputType>Game</XnaOutputType>
+    <XnaProfile>Reach</XnaProfile>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation />
+    <PublishUrl>F:\Projets Visual Studio\TGPA%28SVN%29\TheGreatPaperAdventure\Bin\Release\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>true</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>true</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <UpdateUrl>http://thegreatpaperadventure.com/files/release/</UpdateUrl>
+    <SupportUrl>http://www.thegreatpaperadventure.com/support.php</SupportUrl>
+    <ErrorReportUrl>http://www.thegreatpaperadventure.com/</ErrorReportUrl>
+    <TargetCulture>fr</TargetCulture>
+    <ProductName>The Great Paper Adventure</ProductName>
+    <PublisherName>The Great Paper Team</PublisherName>
+    <SuiteName>The Great Paper Adventure</SuiteName>
+    <MinimumRequiredVersion>1.0.2.2</MinimumRequiredVersion>
+    <WebPage>publish.htm</WebPage>
+    <OpenBrowserOnPublish>false</OpenBrowserOnPublish>
+    <ApplicationRevision>1</ApplicationRevision>
+    <ApplicationVersion>1.0.7.%2a</ApplicationVersion>
+    <UseApplicationTrust>true</UseApplicationTrust>
+    <CreateDesktopShortcut>true</CreateDesktopShortcut>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <BootstrapperComponentsUrl>http://thegreatpaperadventure.com/files/release</BootstrapperComponentsUrl>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\x86\Debug</OutputPath>
+    <DefineConstants>DEBUG;TRACE;WINDOWS</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <NoStdLib>true</NoStdLib>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <PlatformTarget>x86</PlatformTarget>
+    <XnaCompressContent>True</XnaCompressContent>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <DocumentationFile>
+    </DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\x86\Release</OutputPath>
+    <DefineConstants>TRACE;WINDOWS</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <NoStdLib>true</NoStdLib>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <PlatformTarget>x86</PlatformTarget>
+    <XnaCompressContent>True</XnaCompressContent>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Xna.Framework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=842cf8be1de50553">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Microsoft.Xna.Framework.Avatar, Version=4.0.0.0, Culture=neutral, PublicKeyToken=842cf8be1de50553, processorArchitecture=MSIL">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Microsoft.Xna.Framework.Game, Version=4.0.0.0, Culture=neutral, PublicKeyToken=842cf8be1de50553">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Microsoft.Xna.Framework.GamerServices, Version=4.0.0.0, Culture=neutral, PublicKeyToken=842cf8be1de50553, processorArchitecture=MSIL">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Microsoft.Xna.Framework.Graphics, Version=4.0.0.0, Culture=neutral, PublicKeyToken=842cf8be1de50553, processorArchitecture=x86">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Microsoft.Xna.Framework.Input.Touch, Version=4.0.0.0, Culture=neutral, PublicKeyToken=842cf8be1de50553, processorArchitecture=MSIL">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Microsoft.Xna.Framework.Net, Version=4.0.0.0, Culture=neutral, PublicKeyToken=842cf8be1de50553, processorArchitecture=MSIL">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Microsoft.Xna.Framework.Storage, Version=4.0.0.0, Culture=neutral, PublicKeyToken=842cf8be1de50553, processorArchitecture=MSIL">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Microsoft.Xna.Framework.Video, Version=4.0.0.0, Culture=neutral, PublicKeyToken=842cf8be1de50553, processorArchitecture=MSIL">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Microsoft.Xna.Framework.Xact, Version=4.0.0.0, Culture=neutral, PublicKeyToken=842cf8be1de50553, processorArchitecture=x86">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="mscorlib">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Core">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+      <Private>False</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Game\BadGuys\Boss\Ariel.cs" />
+    <Compile Include="Game\BadGuys\Bird.cs" />
+    <Compile Include="Game\BadGuys\Boss\BN.cs" />
+    <Compile Include="Game\BadGuys\Boss\CrazyDoc.cs" />
+    <Compile Include="Game\BadGuys\Boss\Derrick.cs" />
+    <Compile Include="Game\BadGuys\Boss\ElFeroCactae.cs" />
+    <Compile Include="Game\BadGuys\Boss\Esquimo.cs" />
+    <Compile Include="Game\BadGuys\Boss\MaskedEsquimo.cs" />
+    <Compile Include="Game\BadGuys\Boss\KingPoulpi.cs" />
+    <Compile Include="Game\BadGuys\BouleEpine.cs" />
+    <Compile Include="Game\BadGuys\Caca.cs" />
+    <Compile Include="Game\BadGuys\CactusMan.cs" />
+    <Compile Include="Game\BadGuys\Canon.cs" />
+    <Compile Include="Game\BadGuys\Avalanche.cs" />
+    <Compile Include="Game\BadGuys\PoulpElite.cs" />
+    <Compile Include="Game\BadGuys\PoulpiKnight.cs" />
+    <Compile Include="Game\BadGuys\FireSkull.cs" />
+    <Compile Include="Game\BadGuys\PoulpiSnow.cs" />
+    <Compile Include="Game\BadGuys\PoulpiFrozen.cs" />
+    <Compile Include="Game\BadGuys\Pumpkin.cs" />
+    <Compile Include="Game\BadGuys\Witch.cs" />
+    <Compile Include="Game\BadGuys\Yeti.cs" />
+    <Compile Include="Game\BadGuys\FlipperZombie.cs" />
+    <Compile Include="Game\BadGuys\McBernickZombie.cs" />
+    <Compile Include="Game\BadGuys\PoulpiZombie.cs" />
+    <Compile Include="Game\BadGuys\RockLauncher.cs" />
+    <Compile Include="Game\BadGuys\PoulpiMarin.cs" />
+    <Compile Include="Game\BadGuys\SapinLauncher.cs" />
+    <Compile Include="Game\BadGuys\LittleUndergroundCreature.cs" />
+    <Compile Include="Game\BadGuys\Pingouin.cs" />
+    <Compile Include="Game\BadGuys\PingouinLauncher.cs" />
+    <Compile Include="Game\BadGuys\PoulpiMexico.cs" />
+    <Compile Include="Game\BadGuys\Cow.cs" />
+    <Compile Include="Game\BadGuys\EtoileMer.cs" />
+    <Compile Include="Game\BadGuys\Flipper.cs" />
+    <Compile Include="Game\BadGuys\McBernick.cs" />
+    <Compile Include="Game\BadGuys\Poulpi.cs" />
+    <Compile Include="Game\BadGuys\Pepito.cs" />
+    <Compile Include="Game\BadGuys\Pirate.cs" />
+    <Compile Include="Game\BadGuys\Moustik.cs" />
+    <Compile Include="Game\BadGuys\AirFighter.cs" />
+    <Compile Include="Game\BadGuys\Rock.cs" />
+    <Compile Include="Game\BadGuys\Trainee.cs" />
+    <Compile Include="Game\BadGuys\CowLauncher.cs" />
+    <Compile Include="Game\Entities\BackgroundActiveElement.cs" />
+    <Compile Include="Game\Entities\Boss.cs" />
+    <Compile Include="Game\BadGuys\RockDoor.cs" />
+    <Compile Include="Game\Graphics\TGPASpriteBatch.cs" />
+    <Compile Include="Game\Hitbox\CircleHitbox.cs" />
+    <Compile Include="Game\Hitbox\EmptyHitbox.cs" />
+    <Compile Include="Game\Hitbox\Hitbox.cs" />
+    <Compile Include="Game\Hitbox\PositonedHitbox.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Game\Hitbox\SquareHitbox.cs" />
+    <Compile Include="Game\Other\Cheatcodes.cs" />
+    <Compile Include="Game\Other\Rumble.cs" />
+    <Compile Include="Game\Other\Saver.cs" />
+    <Compile Include="Game\Score\FlyingScores.cs" />
+    <Compile Include="Game\HUD\Node.cs" />
+    <Compile Include="Game\Other\OptionsData.cs" />
+    <Compile Include="Game\Sound\MusicEngine.cs" />
+    <Compile Include="Game\Sound\SongInfo.cs" />
+    <Compile Include="Game\Sound\SoundEngine.cs" />
+    <Compile Include="Game\Entities\BadGuy.cs" />
+    <Compile Include="Game\Entities\Bonus.cs" />
+    <Compile Include="Game\Entities\Entity.cs" />
+    <Compile Include="Game\HUD\HUD.cs" />
+    <Compile Include="Game\Weapons\Flamethrower.cs" />
+    <Compile Include="Game\Weapons\LanceTruc.cs" />
+    <Compile Include="Game\Weapons\MachineGun.cs" />
+    <Compile Include="Game\Weapons\Megabomb.cs" />
+    <Compile Include="Game\Weapons\RocketLauncher.cs" />
+    <Compile Include="Game\Weapons\ShotGun.cs" />
+    <Compile Include="Localization\LocalizedStrings.cs" />
+    <Compile Include="Localization\TGPAStrings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TGPAStrings.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Maps\BackgroundPart.cs" />
+    <Compile Include="Maps\Commands\AddBombToPlayerCommand.cs" />
+    <Compile Include="Maps\Commands\AddEnemyCommand.cs" />
+    <Compile Include="Maps\Commands\AddRandomBonusCommand.cs" />
+    <Compile Include="Maps\Commands\ChangeMusicCommand.cs" />
+    <Compile Include="Maps\Commands\ChangeMusicStateCommand.cs" />
+    <Compile Include="Maps\Commands\ChangeScrollingCommands.cs" />
+    <Compile Include="Maps\Commands\AddBackgroundElementCommand.cs" />
+    <Compile Include="Maps\Commands\EndlevelCommand.cs" />
+    <Compile Include="Maps\Commands\EnemyAutoGenerationCommand.cs" />
+    <Compile Include="Maps\Commands\SetFlagCommand.cs" />
+    <Compile Include="Maps\Commands\UnsetFlagCommand.cs" />
+    <Compile Include="Maps\Commands\WaitCommand.cs" />
+    <Compile Include="Maps\Commands\IfCommand.cs" />
+    <Compile Include="Maps\Commands\WhileNotCommand.cs" />
+    <Compile Include="Maps\Map.cs" />
+    <Compile Include="Game\Other\MovePatterns.cs" />
+    <Compile Include="Game\Entities\Player.cs" />
+    <Compile Include="Maps\Command.cs" />
+    <Compile Include="Maps\Event.cs" />
+    <Compile Include="Maps\MapFlag.cs" />
+    <Compile Include="Maps\ScrollingBackground.cs" />
+    <Compile Include="Maps\World.cs" />
+    <Compile Include="Screens\Controls\ListControl.cs" />
+    <Compile Include="Screens\Controls\ListElement.cs" />
+    <Compile Include="Screens\Controls\Textbox.cs" />
+    <Compile Include="Screens\Controls\TGPAControl.cs" />
+    <Compile Include="Screens\CreditsScreen.cs" />
+    <Compile Include="Screens\DemoEndScreen.cs" />
+    <Compile Include="Screens\EndLevelScreen.cs" />
+    <Compile Include="Game\Score\ScoreLine.cs" />
+    <Compile Include="Screens\SplashScreen.cs" />
+    <Compile Include="Screens\LevelSelectionScreen.cs" />
+    <Compile Include="Screens\LoadingScreen.cs" />
+    <Compile Include="Screens\TitleScreen.cs" />
+    <Compile Include="SpecialEffects\Blast.cs" />
+    <Compile Include="SpecialEffects\Bullet.cs" />
+    <Compile Include="SpecialEffects\BNMiettes.cs" />
+    <Compile Include="SpecialEffects\ChocolatePiece.cs" />
+    <Compile Include="SpecialEffects\Snow.cs" />
+    <Compile Include="SpecialEffects\Fire.cs" />
+    <Compile Include="SpecialEffects\HeartWave.cs" />
+    <Compile Include="SpecialEffects\MuzzleFlash.cs" />
+    <Compile Include="SpecialEffects\Particle.cs" />
+    <Compile Include="SpecialEffects\ParticleManager.cs" />
+    <Compile Include="SpecialEffects\Smoke.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="TGPAContext.cs" />
+    <Compile Include="TheGreatPaperGame.cs" />
+    <Compile Include="Game\Entities\Shot.cs" />
+    <Compile Include="Game\Weapons\Weapon.cs" />
+    <Compile Include="Utils\Angles.cs" />
+    <Compile Include="Utils\ButtonPrinter.cs" />
+    <Compile Include="Utils\Input\Device.cs" />
+    <Compile Include="Utils\Input\InputManager.cs" />
+    <Compile Include="Utils\Input\JoystickManager.cs" />
+    <Compile Include="Utils\Input\JoystickReader.cs" />
+    <Compile Include="Utils\Logger.cs" />
+    <Compile Include="Utils\RandomMachine.cs" />
+    <Compile Include="Game\Graphics\Resolution.cs" />
+    <Compile Include="Utils\SerializableDictionary.cs" />
+    <Compile Include="Utils\TextPrinter.cs" />
+    <Compile Include="Utils\TGPAConvert.cs" />
+    <Compile Include="Utils\Vectors.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="GameThumbnail.png" />
+    <Content Include="Game.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <NestedContentProject Include="Content\Content.contentproj">
+      <Project>c784ba0e-72ce-4817-b68f-7470e36b7bda</Project>
+      <Visible>False</Visible>
+    </NestedContentProject>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.0,Profile=Client">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4 Client Profile %28x86 et x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 2.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.4.5">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 4.5</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Xna.Framework.4.0">
+      <Visible>False</Visible>
+      <ProductName>Microsoft XNA Framework Redistributable 4.0</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="TGPA.cd" />
+    <None Include="Properties\app.manifest" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\EasyStorageLib\EasyStorage\EasyStorage [Windows].csproj">
+      <Project>{A89EB1D5-B286-48EB-A864-315ABCDAA024}</Project>
+      <Name>EasyStorage [Windows]</Name>
+    </ProjectReference>
+    <ProjectReference Include="Content\TheGreatPaperAdventureContent.contentproj">
+      <Project>{C784BA0E-72CE-4817-B68F-7470E36B7BDA}</Project>
+      <Name>TheGreatPaperAdventureContent %28Content%29</Name>
+      <XnaReferenceType>Content</XnaReferenceType>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Localization\TGPAStrings.en.resx" />
+    <EmbeddedResource Include="Localization\TGPAStrings.fr.resx" />
+    <EmbeddedResource Include="Localization\TGPAStrings.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>TGPAStrings.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\XNA Game Studio\Microsoft.Xna.GameStudio.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

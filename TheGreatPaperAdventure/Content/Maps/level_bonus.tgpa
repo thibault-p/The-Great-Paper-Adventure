@@ -1,0 +1,37 @@
+//Map infos
+level 6
+lastpart true
+name Level6Name
+desc Level6Desc
+
+//BG1
+bg1 Left 0 0 true
+bgpart vide
+
+//BG2
+bg2 Left 0 0 false
+bgpart vide
+
+//BG3
+bg3 Left 0 0 true
+bgpart vide
+
+
+//Init game
+init
+music level0Music "Edward the dwarf" "Spintronic"
+score 0
+lives 3
+weapon MachineGun
+location 100 300
+flip None
+winflag endlevel
+loseflag playerdie
+
+
+begin
+
+
+
+
+end

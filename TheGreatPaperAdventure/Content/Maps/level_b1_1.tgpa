@@ -1,0 +1,788 @@
+version 1,0
+
+//Map infos
+level 42
+lastpart false
+name BonusLevel1Name
+desc BonusLevel1Desc
+
+//BG1
+bg1 Left 50 0 True
+bgpart levelb1/part1/lvlb1_1_bg1_1
+
+
+//BG2
+bg2 Left 100 0 True
+bgpart vide
+bgpart levelb1/part1/lvlb1_1_bg2_2
+
+
+//BG3
+bg3 Left 300 0 True
+bgpart vide
+bgpart levelb1/part1/lvlb1_1_bg3_1
+
+//Init game
+init
+music levelb1_1Music "Cake aux poulpes (feat. Flip-Flop)" "Spintronic"
+score 0
+lives 5
+weapon MachineGun
+location 50 300
+flip None
+winflag endlevel
+loseflag playersdie
+outDirection Right
+
+begin
+
+event "" 100 0
+start 
+addenemy Poulpi 1 0,1 nobonus Left noflags None
+addenemy Poulpi 1 0,2 nobonus Left noflags None
+endevent
+
+event "" 150 0
+start 
+addenemy Poulpi 1 0,1 nobonus Left noflags None
+addenemy Poulpi 1 0,2 nobonus Left noflags None
+addenemy Poulpi 1 0,3 MachineGun Left noflags None
+addenemy Poulpi 1 0,4 nobonus Left noflags None
+endevent
+
+event "" 200 0
+start 
+addenemy Poulpi 1 0,3 nobonus Left noflags None
+addenemy Poulpi 1 0,4 nobonus Left noflags None
+addenemy Poulpi 1 0,5 MachineGun Left noflags None
+endevent
+
+event "" 250 0
+start 
+addenemy Poulpi 1 0,5 MachineGun Left noflags None
+addenemy Poulpi 1 0,7 nobonus Left noflags None
+addenemy Poulpi 1 0,8 nobonus Left noflags None
+endevent
+
+event "" 300 0
+start 
+addenemy Poulpi 1 0,7 nobonus Left noflags None
+addenemy Poulpi 1 0,8 nobonus Left noflags None
+addenemy Poulpi 1 0,9 nobonus Left noflags None
+endevent
+
+event "" 350 0
+start 
+addenemy Poulpi 1 0,9 Megabomb Left noflags None
+endevent
+
+event "" 375 0
+start 
+addenemy Poulpi 0,9 -1 nobonus LeftAndRight noflags None
+endevent
+
+event "" 400 0
+start 
+addenemy Poulpi 0,9 -1 nobonus LeftAndRight noflags None
+addenemy Poulpi 0,5 -1 nobonus LeftAndRight noflags None
+endevent
+
+event "" 425 0
+start 
+addenemy Poulpi 0,9 -1 nobonus LeftAndRight noflags None
+addenemy Poulpi 0,5 -1 nobonus LeftAndRight noflags None
+endevent
+
+event "" 450 0
+start 
+addenemy Poulpi 0,9 -1 nobonus LeftAndRight noflags None
+addenemy Poulpi 0,5 -1 nobonus LeftAndRight noflags None
+endevent
+
+event "" 475 0
+start 
+addenemy Poulpi 0,5 -1 nobonus LeftAndRight noflags None
+endevent
+
+event "" 550 0
+start 
+addenemy PoulpiMexico 1 0,8 nobonus InverseV noflags None
+endevent
+
+event "" 575 0
+start 
+addenemy PoulpiMexico 1 0,8 nobonus InverseV noflags None
+endevent
+
+event "" 600 0
+start 
+addenemy PoulpiMexico 1 0,8 nobonus InverseV noflags None
+endevent
+
+event "" 625 0
+start 
+addenemy PoulpiMexico 1 0,2 nobonus InverseV noflags None
+endevent
+
+event "" 650 0
+start 
+addenemy PoulpiMexico 1 0,3 nobonus InverseV noflags None
+endevent
+
+event "" 675 0
+start 
+addenemy PoulpiMexico 1 0,4 nobonus InverseV noflags None
+endevent
+
+event "" 750 0
+start 
+addenemy PoulpiMexico 1 0,5 nobonus Left noflags None
+endevent
+
+event "" 775 0
+start 
+addenemy PoulpiMexico 1 0,5 nobonus Left noflags None
+endevent
+
+event "" 825 0
+start 
+addenemy PoulpiMexico 0,2 -1 nobonus Down noflags FlipHorizontally
+endevent
+
+event "" 850 0
+start 
+addenemy PoulpiMexico 0,3 -1 nobonus Down noflags FlipHorizontally
+endevent
+
+event "" 875 0
+start 
+addenemy PoulpiMexico 0,4 -1 nobonus Down noflags FlipHorizontally
+endevent
+
+event "" 900 0
+start 
+addenemy PoulpiMexico 0,3 -1 nobonus Down noflags FlipHorizontally
+addenemy PoulpiMexico 0,5 -1 nobonus Down noflags FlipHorizontally
+endevent
+
+event "" 925 0
+start 
+addenemy PoulpiMexico 0,4 -1 nobonus Down noflags FlipHorizontally
+addenemy PoulpiMexico 0,6 -1 nobonus Down noflags FlipHorizontally
+endevent
+
+event "" 950 0
+start 
+addenemy PoulpiMexico 0,3 -1 nobonus Down noflags FlipHorizontally
+addenemy PoulpiMexico 0,5 -1 nobonus Down noflags FlipHorizontally
+addenemy PoulpiMexico 0,7 -1 nobonus Down noflags FlipHorizontally
+endevent
+
+event "" 975 0
+start
+addenemy PoulpiMexico 0,4 -1 nobonus Down noflags FlipHorizontally
+addenemy PoulpiMexico 0,6 -1 MachineGun Down noflags FlipHorizontally
+endevent
+
+event "" 1000 0
+start
+addenemy PoulpiMexico 0,7 -1 nobonus Down noflags FlipHorizontally
+endevent
+
+event "" 950 0
+start 
+
+whilenot poulpiStop1 3
+addenemy PoulpiMexico -1 0,2 nobonus Right noflags FlipHorizontally
+addenemy PoulpiMexico -1 0,8 nobonus Right noflags FlipHorizontally
+done
+
+endevent
+
+event "" 975 0
+start 
+
+whilenot poulpiStop1 2
+addenemy PoulpiMexico 1 0,2 nobonus Left noflags None
+addenemy PoulpiMexico 1 0,8 nobonus Left noflags None
+done
+
+endevent
+
+event "" 1650 0
+start 
+addenemy Poulpi 1 0,4 nobonus Left noflags None
+addenemy Poulpi 1 0,5 nobonus Left noflags None
+addenemy Poulpi 1 0,6 nobonus Left noflags None
+set poulpiStop1
+endevent
+
+event "" 1675 0
+start 
+addenemy Poulpi 1 0,4 nobonus Left noflags None
+addenemy Poulpi 1 0,5 nobonus Left noflags None
+addenemy Poulpi 1 0,6 nobonus Left noflags None
+endevent
+
+event "" 1700 0
+start 
+addenemy Poulpi 1 0,4 nobonus Left noflags None
+addenemy Poulpi 1 0,5 MachineGun Left noflags None
+addenemy Poulpi 1 0,6 MachineGun Left noflags None
+endevent
+
+event "" 1800 0
+start 
+whilenot poulpiStop2 1
+addenemy Poulpi 1 0,1 nobonus BigAndFastUpAndDown noflags None
+addenemy Poulpi 1 0,9 nobonus BigAndFastUpAndDown noflags None
+done
+endevent
+
+event "" 1900 0
+start 
+whilenot poulpiStop2 1
+addenemy Poulpi 0,4 1 nobonus Up noflags None
+addenemy Poulpi 0,8 1 nobonus Up noflags None
+done
+endevent
+
+event "" 2000 0
+start 
+whilenot poulpiStop2 1
+addenemy Poulpi 0,55 -1 nobonus Down noflags None
+addenemy Poulpi 0,65 -1 nobonus Down noflags None
+done
+endevent
+
+event "" 2500 0
+start 
+set poulpiStop2
+endevent
+
+event "" 2550 0
+start 
+addenemy PoulpiZombie 1 0,2 MachineGun Left noflags None
+addenemy PoulpiZombie 1 0,4 Flamethrower Left noflags None
+addenemy PoulpiZombie 1 0,6 ShotGun Left noflags None
+addenemy PoulpiZombie 1 0,8 RocketLauncher Left noflags None
+endevent
+
+event "" 2600 0
+start 
+addenemy PoulpiZombie 1 0,2 MachineGun Left noflags None
+addenemy PoulpiZombie 1 0,4 Flamethrower Left noflags None
+addenemy PoulpiZombie 1 0,6 ShotGun Left noflags None
+addenemy PoulpiZombie 1 0,8 RocketLauncher Left noflags None
+endevent
+
+event "" 2650 0
+start 
+addenemy PoulpiZombie 1 0,2 MachineGun Left noflags None
+addenemy PoulpiZombie 1 0,4 Flamethrower Left noflags None
+addenemy PoulpiZombie 1 0,6 ShotGun Left noflags None
+addenemy PoulpiZombie 1 0,8 RocketLauncher Left noflags None
+
+whilenot poulpiMarinStop 2
+addenemy PoulpiMarin 1 -1 nobonus LeftDownCorner noflags None
+addenemy PoulpiMarin 1 1 nobonus LeftUpCorner noflags None
+done
+
+endevent
+
+event "" 2800 0
+start 
+addenemy Poulpi 1 0,3 nobonus BigAndFastUpAndDown noflags None
+addenemy Poulpi 1 0,7 nobonus BigAndFastUpAndDown noflags None
+endevent
+
+event "" 2850 0
+start 
+
+whilenot poulpiStop3 5
+addenemy PoulpiZombie -1 0,1 nobonus Right noflags FlipHorizontally
+addenemy PoulpiZombie -1 0,2 nobonus Right noflags FlipHorizontally
+addenemy PoulpiZombie -1 0,3 nobonus Right noflags FlipHorizontally
+addenemy PoulpiZombie -1 0,5 nobonus Right noflags FlipHorizontally
+addenemy PoulpiZombie -1 0,6 nobonus Right noflags FlipHorizontally
+addenemy PoulpiZombie -1 0,7 nobonus Right noflags FlipHorizontally
+addenemy PoulpiZombie -1 0,8 nobonus Right noflags FlipHorizontally
+addenemy PoulpiZombie -1 0,9 nobonus Right noflags FlipHorizontally
+done
+
+endevent
+
+event "" 3400 0
+start 
+set poulpiMarinStop
+addenemy Poulpi 1 0,2 nobonus LeftDownCorner noflags None
+endevent
+
+event "" 3450 0
+start 
+addenemy Poulpi 1 0,2 nobonus LeftDownCorner noflags None
+endevent
+
+event "" 3500 0
+start 
+addenemy Poulpi 1 0,2 nobonus LeftDownCorner noflags None
+addenemy Poulpi 1 0,8 nobonus LeftUpCorner noflags None
+endevent
+
+event "" 3550 0
+start 
+addenemy Poulpi 1 0,8 nobonus LeftUpCorner noflags None
+endevent
+
+event "" 3600 0
+start 
+addenemy Poulpi 1 0,8 nobonus LeftUpCorner noflags None
+endevent
+
+event "" 3650 0
+start 
+addenemy Poulpi 1 0,8 nobonus LeftUpCorner noflags None
+endevent
+
+event "" 3700 0
+start 
+addenemy Poulpi 1 0,4 nobonus Left noflags None
+addenemy Poulpi 1 0,5 nobonus Left noflags None
+addenemy Poulpi 1 0,6 nobonus Left noflags None
+endevent
+
+event "" 3750 0
+start 
+addenemy Poulpi 1 0,4 nobonus Left noflags None
+addenemy Poulpi 1 0,5 nobonus Left noflags None
+addenemy Poulpi 1 0,6 nobonus Left noflags None
+endevent
+
+event "" 4000 0
+start 
+set poulpiStop3
+endevent
+
+event "" 4050 0
+start 
+
+whilenot poulpiStop4 2
+addenemy Poulpi 1 0,9 nobonus Z noflags None
+addenemy Poulpi -1 0,9 nobonus Z noflags FlipHorizontally
+done
+
+endevent
+
+event "" 4350 0
+start 
+set poulpiStop4
+endevent
+
+event "" 4500 0
+start 
+addenemy Poulpi 0,35 1 nobonus Up noflags FlipHorizontally
+addenemy Poulpi 0,45 1 MachineGun Up noflags FlipHorizontally
+addenemy Poulpi 0,55 1 nobonus Up noflags FlipHorizontally
+addenemy Poulpi 0,65 1 Life Up noflags FlipHorizontally
+addenemy Poulpi 0,75 1 nobonus Up noflags FlipHorizontally
+endevent
+
+event "" 4600 0
+start 
+addenemy Poulpi 0,35 -1 nobonus Down noflags None
+addenemy Poulpi 0,45 -1 nobonus Down noflags None
+addenemy Poulpi 0,55 -1 nobonus Down noflags None
+addenemy Poulpi 0,65 -1 nobonus Down noflags None
+addenemy Poulpi 0,75 -1 nobonus Down noflags None
+endevent
+
+event "" 4700 0
+start 
+addenemy Poulpi 0,35 1 nobonus Up noflags FlipHorizontally
+addenemy Poulpi 0,45 1 nobonus Up noflags FlipHorizontally
+addenemy Poulpi 0,55 1 nobonus Up noflags FlipHorizontally
+addenemy Poulpi 0,65 1 nobonus Up noflags FlipHorizontally
+addenemy Poulpi 0,75 1 nobonus Up noflags FlipHorizontally
+endevent
+
+event "" 4800 0
+start 
+addenemy Poulpi 0,35 -1 nobonus Down noflags None
+addenemy Poulpi 0,45 -1 nobonus Down noflags None
+addenemy Poulpi 0,55 -1 nobonus Down noflags None
+addenemy Poulpi 0,65 -1 MachineGun Down noflags None
+addenemy Poulpi 0,75 -1 nobonus Down noflags None
+endevent
+
+event "" 5000 0
+start 
+addenemy Poulpi -1 0,4 nobonus Right noflags FlipHorizontally
+addenemy Poulpi -1 0,5 nobonus Right noflags FlipHorizontally
+addenemy Poulpi -1 0,6 nobonus Right noflags FlipHorizontally
+endevent
+
+event "" 5100 0
+start 
+addenemy Poulpi -1 0,4 nobonus Right noflags FlipHorizontally
+addenemy Poulpi -1 0,5 nobonus Right noflags FlipHorizontally
+addenemy Poulpi -1 0,6 nobonus Right noflags FlipHorizontally
+endevent
+
+event "" 5200 0
+start 
+addenemy Poulpi 0,35 1 nobonus Up noflags FlipHorizontally
+addenemy Poulpi 0,45 1 nobonus Up noflags FlipHorizontally
+addenemy Poulpi 0,55 1 nobonus Up noflags FlipHorizontally
+addenemy Poulpi 0,65 1 nobonus Up noflags FlipHorizontally
+addenemy Poulpi 0,75 1 nobonus Up noflags FlipHorizontally
+endevent
+
+event "" 5300 0
+start 
+addenemy Poulpi 0,35 -1 nobonus Down noflags None
+addenemy Poulpi 0,45 -1 nobonus Down noflags None
+addenemy Poulpi 0,55 -1 nobonus Down noflags None
+addenemy Poulpi 0,65 -1 MachineGun Down noflags None
+addenemy Poulpi 0,75 -1 nobonus Down noflags None
+endevent
+
+event "" 5400 0
+start 
+addenemy Poulpi 0,35 1 nobonus Up noflags FlipHorizontally
+addenemy Poulpi 0,45 1 nobonus Up noflags FlipHorizontally
+addenemy Poulpi 0,55 1 nobonus Up noflags FlipHorizontally
+addenemy Poulpi 0,65 1 nobonus Up noflags FlipHorizontally
+addenemy Poulpi 0,75 1 nobonus Up noflags FlipHorizontally
+endevent
+
+event "" 5500 0
+start 
+addenemy Poulpi 0,35 -1 nobonus Down noflags None
+addenemy Poulpi 0,45 -1 nobonus Down noflags None
+addenemy Poulpi 0,55 -1 nobonus Down noflags None
+addenemy Poulpi 0,65 -1 nobonus Down noflags None
+addenemy Poulpi 0,75 -1 nobonus Down noflags None
+endevent
+
+event "" 5100 0
+start 
+addenemy Poulpi 1 0,4 nobonus Left noflags None
+addenemy Poulpi 1 0,5 nobonus Left noflags None
+addenemy Poulpi 1 0,6 nobonus Left noflags None
+endevent
+
+event "" 5200 0
+start 
+addenemy Poulpi 1 0,4 nobonus Left noflags None
+addenemy Poulpi 1 0,5 MachineGun Left noflags None
+addenemy Poulpi 1 0,6 nobonus Left noflags None
+endevent
+
+event "" 5300 0
+start 
+
+whilenot poulpiMarinStop2 2
+addenemy PoulpiMarin 1 0,1 nobonus Left noflags FlipHorizontally
+addenemy PoulpiMarin 1 0,3 nobonus Left noflags FlipHorizontally
+addenemy PoulpiMarin 1 0,5 nobonus Left noflags FlipHorizontally
+addenemy PoulpiMarin 1 0,7 nobonus Left noflags FlipHorizontally
+addenemy PoulpiMarin 1 0,9 nobonus Left noflags FlipHorizontally
+
+addenemy PoulpiMarin -1 0,4 nobonus Right noflags None
+addenemy PoulpiMarin -1 0,6 nobonus Right noflags None
+done
+
+endevent
+
+
+event "" 5600 0
+start 
+
+set poulpiMarinStop2
+
+whilenot poulpiMarinStop3 2
+addenemy PoulpiMarin 0,1 -1 nobonus Down noflags FlipHorizontally
+addenemy PoulpiMarin 0,3 -1 ShotGun Down noflags FlipHorizontally
+addenemy PoulpiMarin 0,5 -1 nobonus Down noflags FlipHorizontally
+addenemy PoulpiMarin 0,7 -1 nobonus Down noflags FlipHorizontally
+addenemy PoulpiMarin 0,9 -1 nobonus Down noflags FlipHorizontally
+addenemy PoulpiMarin 0,2 1 nobonus Up noflags None
+addenemy PoulpiMarin 0,4 1 nobonus Up noflags None
+addenemy PoulpiMarin 0,6 1 nobonus Up noflags None
+addenemy PoulpiMarin 0,8 1 MachineGun Up noflags None
+done
+
+endevent
+
+event "" 5800 0
+start 
+
+set poulpiMarinStop3
+
+endevent
+
+event "" 5950 0
+start 
+
+addenemy PoulpiSnow 1 0,1 nobonus LeftDownCorner noflags None
+addenemy PoulpiSnow 1 0,2 nobonus SmallU noflags None
+addenemy PoulpiSnow 1 0,3 nobonus SmallU noflags None
+
+addenemy PoulpiSnow 1 0,7 nobonus SmallU noflags None
+addenemy PoulpiSnow 1 0,8 nobonus SmallU noflags None
+addenemy PoulpiSnow 1 0,9 nobonus LeftUpCorner noflags None
+
+endevent
+
+event "" 6000 0
+start 
+
+addenemy PoulpiSnow 1 0,1 nobonus LeftDownCorner noflags None
+addenemy PoulpiSnow 1 0,2 nobonus SmallU noflags None
+addenemy PoulpiSnow 1 0,3 nobonus SmallU noflags None
+
+addenemy PoulpiSnow 1 0,7 nobonus SmallU noflags None
+addenemy PoulpiSnow 1 0,8 nobonus SmallU noflags None
+addenemy PoulpiSnow 1 0,9 nobonus LeftUpCorner noflags None
+
+endevent
+
+event "" 6050 0
+start 
+
+addenemy PoulpiSnow 1 0,1 nobonus LeftDownCorner noflags None
+addenemy PoulpiSnow 1 0,2 nobonus SmallU noflags None
+addenemy PoulpiSnow 1 0,3 nobonus SmallU noflags None
+
+addenemy PoulpiSnow 1 0,7 nobonus SmallU noflags None
+addenemy PoulpiSnow 1 0,8 nobonus SmallU noflags None
+addenemy PoulpiSnow 1 0,9 nobonus LeftUpCorner noflags None
+
+endevent
+
+event "" 6250 0
+start 
+
+whilenot zombieWallStop 2
+addenemy PoulpiZombie 1 0,05 nobonus Left noflags None
+addenemy PoulpiZombie 1 0,1 nobonus Left noflags None
+addenemy PoulpiZombie 1 0,15 nobonus Left noflags None
+addenemy PoulpiZombie 1 0,2 nobonus Left noflags None
+addenemy PoulpiZombie 1 0,25 nobonus Left noflags None
+addenemy PoulpiZombie 1 0,3 nobonus Left noflags None
+addenemy PoulpiZombie 1 0,35 nobonus Left noflags None
+addenemy PoulpiZombie 1 0,4 nobonus Left noflags None
+addenemy PoulpiZombie 1 0,45 nobonus Left noflags None
+addenemy PoulpiZombie 1 0,5 nobonus Left noflags None
+addenemy PoulpiZombie 1 0,55 nobonus Left noflags None
+addenemy PoulpiZombie 1 0,6 nobonus Left noflags None
+addenemy PoulpiZombie 1 0,65 nobonus Left noflags None
+addenemy PoulpiZombie 1 0,7 nobonus Left noflags None
+addenemy PoulpiZombie 1 0,75 nobonus Left noflags None
+addenemy PoulpiZombie 1 0,8 nobonus Left noflags None
+addenemy PoulpiZombie 1 0,85 nobonus Left noflags None
+addenemy PoulpiZombie 1 0,9 nobonus Left noflags None
+addenemy PoulpiZombie 1 0,95 nobonus Left noflags None
+
+addenemy PoulpiKnight -1 0,3 nobonus SmallLace noflags FlipHorizontally
+addenemy PoulpiKnight -1 0,5 nobonus SmallLace noflags FlipHorizontally
+addenemy PoulpiKnight -1 0,7 nobonus SmallLace noflags FlipHorizontally
+
+done
+
+endevent
+
+event "" 6500 0
+start 
+set zombieWallStop
+endevent
+
+event "" 6550 0
+start 
+addenemy PoulpiKnight 1 0,5 MachineGun Left noflags None
+endevent
+
+event "" 6575 0
+start 
+addenemy PoulpiKnight 1 0,3 nobonus Left noflags None
+endevent
+
+event "" 6580 0
+start 
+addenemy PoulpiKnight 1 0,7 ShotGun Left noflags None
+endevent
+
+event "" 6595 0
+start 
+addenemy PoulpiKnight 1 0,9 nobonus Left noflags None
+endevent
+
+event "" 6650 0
+start 
+addenemy PoulpiKnight 1 0,5 nobonus Left noflags None
+endevent
+
+event "" 6700 0
+start 
+addenemy PoulpiKnight -1 0,3 nobonus Right noflags FlipHorizontally
+endevent
+
+event "" 6725 0
+start 
+addenemy PoulpiKnight -1 0,39 nobonus Right noflags FlipHorizontally
+endevent
+
+event "" 6750 0
+start 
+addenemy PoulpiKnight -1 0,89 Megabomb RightUpCorner noflags FlipHorizontally
+endevent
+
+event "" 6775 0
+start 
+addenemy PoulpiKnight 1 0,59 nobonus Left noflags None
+endevent
+
+event "" 6800 0
+start 
+addenemy PoulpiKnight 1 0,25 nobonus Left noflags None
+endevent
+
+event "" 6810 0
+start 
+addenemy PoulpiKnight 1 0,75 nobonus Left noflags None
+endevent
+
+event "" 6850 0
+start 
+addenemy PoulpiKnight 1 0,67 nobonus SmallLace noflags None
+endevent
+
+event "" 6900 0
+start 
+addenemy PoulpiKnight 0,9 -1 nobonus Down noflags None
+endevent
+
+event "" 6925 0
+start 
+addenemy PoulpiKnight 0,8 -1 nobonus Down noflags None
+endevent
+
+event "" 6950 0
+start 
+addenemy PoulpiKnight 0,7 -1 nobonus Down noflags None
+endevent
+
+event "" 6975 0
+start 
+addenemy PoulpiKnight 0,6 -1 nobonus Down noflags None
+endevent
+
+event "" 7000 0
+start 
+addenemy PoulpiKnight 0,5 -1 nobonus Down noflags None
+endevent
+
+event "" 7025 0
+start 
+addenemy PoulpiKnight 0,1 -1 nobonus Down noflags None
+endevent
+
+event "" 7050 0
+start 
+addenemy PoulpiKnight 0,2 -1 nobonus Down noflags None
+endevent
+
+event "" 7050 0
+start 
+addenemy PoulpiKnight 0,3 1 nobonus Up noflags None
+endevent
+
+event "" 7050 0
+start 
+addenemy PoulpiKnight 0,4 1 nobonus Up noflags None
+endevent
+
+event "" 7100 0
+start 
+addenemy PoulpiKnight 0,2 1 nobonus Up noflags None
+endevent
+
+event "" 7150 0
+start 
+addenemy PoulpiKnight 0,6 1 nobonus Up noflags None
+endevent
+
+event "" 7175 0
+start 
+addenemy PoulpiKnight 0,7 1 MachineGun Up noflags None
+endevent
+
+event "" 7200 0
+start 
+addenemy PoulpiKnight 0,8 1 nobonus Up noflags None
+endevent
+
+event "" 7225 0
+start 
+addenemy PoulpiKnight 0,9 1 ShotGun Up noflags None
+endevent
+
+event "" 7250 0
+start 
+addenemy PoulpiKnight 0,7 1 MachineGun Up noflags None
+endevent
+
+event "" 7275 0
+start 
+addenemy PoulpiKnight 0,8 1 nobonus Up noflags None
+endevent
+
+event "" 7300 0
+start 
+addenemy PoulpiKnight 0,9 1 ShotGun Up noflags None
+endevent
+
+event "" 7325 0
+start 
+addenemy PoulpiKnight 0,7 1 MachineGun Up noflags None
+endevent
+
+event "" 7350 0
+start 
+addenemy PoulpiKnight 0,8 1 nobonus Up noflags None
+endevent
+
+event "" 7375 0
+start 
+addenemy PoulpiKnight 0,9 1 ShotGun Up noflags None
+endevent
+
+event "" 7300 0
+start 
+
+whilenot poulpiWallStop 2
+addenemy Poulpi 1 0,05 nobonus Left noflags None
+addenemy Poulpi 1 0,15 nobonus Left noflags None
+addenemy Poulpi 1 0,25 nobonus Left noflags None
+addenemy Poulpi 1 0,45 nobonus Left noflags None
+addenemy Poulpi 1 0,55 nobonus Left noflags None
+addenemy Poulpi 1 0,65 nobonus Left noflags None
+addenemy Poulpi 1 0,75 nobonus Left noflags None
+addenemy Poulpi 1 0,85 nobonus Left noflags None
+addenemy Poulpi 1 0,95 nobonus Left noflags None
+
+done
+
+endevent
+
+event "" 7800 0
+start 
+set poulpiWallStop
+endevent
+
+event "endlevel" 8200 0
+start 
+set endlevel
+endevent
+
+end

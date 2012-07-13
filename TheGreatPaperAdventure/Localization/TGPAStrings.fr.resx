@@ -1,0 +1,474 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Activated" xml:space="preserve">
+    <value>Activé</value>
+  </data>
+  <data name="Apply" xml:space="preserve">
+    <value>Appliquer</value>
+  </data>
+  <data name="BonusLevel1Desc" xml:space="preserve">
+    <value>Niveau bonus ! Le roi Poulpy est très mécontent du génocide que vous avez fait sur ses sujets. Préparez-vous à devoir affronter son armée personnelles pleines de tentacules et guidées par sa majesté en personne !</value>
+  </data>
+  <data name="BonusLevel1Name" xml:space="preserve">
+    <value>Chasse aux poulpes</value>
+  </data>
+  <data name="BonusLevel1_2Desc" xml:space="preserve">
+    <value>Niveau bonus, partie 2 ! Rappel : Le roi Poulpy est très mécontent du génocide que vous avez fait sur ses sujets. Préparez-vous à devoir affronter son armée personnelles pleines de tentacules et guidées par sa majesté en personne !</value>
+  </data>
+  <data name="BonusLevel1_2Name" xml:space="preserve">
+    <value>Chasse aux poulpes (partie 2)</value>
+  </data>
+  <data name="BonusLevel1_3Desc" xml:space="preserve">
+    <value>Ultime combat : affrontez le roi dans un combat sans merci mais avec beaucoup de tentacules</value>
+  </data>
+  <data name="BonusLevel1_3Name" xml:space="preserve">
+    <value>Régicide</value>
+  </data>
+  <data name="Buy" xml:space="preserve">
+    <value>Acheter la version complète</value>
+  </data>
+  <data name="BuyFailContent" xml:space="preserve">
+    <value>Le profil actuellement utilisé par ce contrôleur ne dispose pas de droits suffisant pour acheter The Great Paper Adventure. Utilisez un profil XboxLive pour le faire.</value>
+  </data>
+  <data name="BuyFailTitle" xml:space="preserve">
+    <value>Le marché n'a pas pu être affiché</value>
+  </data>
+  <data name="CancelLaunchLevel" xml:space="preserve">
+    <value>Retour à la carte</value>
+  </data>
+  <data name="CorruptedSavegame" xml:space="preserve">
+    <value>Sauvegarde corrompue ! Données de jeu réinitialisée, désolé faut tout refaire.</value>
+  </data>
+  <data name="CreditsScreenLeave" xml:space="preserve">
+    <value>Passer les crédits</value>
+  </data>
+  <data name="CreditsScreenNext" xml:space="preserve">
+    <value>Suivant</value>
+  </data>
+  <data name="Deactivated" xml:space="preserve">
+    <value>Désactivé</value>
+  </data>
+  <data name="DeviceSelectionScreenInstructionsP1" xml:space="preserve">
+    <value>Choisir le contrôleur de jeu pour le Joueur 1</value>
+  </data>
+  <data name="DeviceSelectionScreenInstructionsP2" xml:space="preserve">
+    <value>Choisir le contrôleur de jeu pour le Joueur 2</value>
+  </data>
+  <data name="Difficulty" xml:space="preserve">
+    <value>Choisir la difficulté :</value>
+  </data>
+  <data name="DisconnectedPadPart1" xml:space="preserve">
+    <value>Une ou plusieurs des manettes sont déconnectées.</value>
+  </data>
+  <data name="DisconnectedPadPart2" xml:space="preserve">
+    <value>Merci de les reconnecter pour pouvoir continuer à jouer.</value>
+  </data>
+  <data name="DisplayMusicInfo" xml:space="preserve">
+    <value>Afficher infos musiques</value>
+  </data>
+  <data name="DisplayPoints" xml:space="preserve">
+    <value>Afficher points gagnés</value>
+  </data>
+  <data name="Easy" xml:space="preserve">
+    <value>Facile</value>
+  </data>
+  <data name="EasyDesc" xml:space="preserve">
+    <value>Vous êtes puissants. Vous pouvez ainsi tout détruire, mais vous n'aurez que peu de points. Pour les joueurs peu habitués aux jeux vidéo.</value>
+  </data>
+  <data name="EndlevelScreenElapsedTime" xml:space="preserve">
+    <value>Temps écoulé</value>
+  </data>
+  <data name="EndlevelScreenLevelPoints" xml:space="preserve">
+    <value>Points du niveau</value>
+  </data>
+  <data name="EndlevelScreenPressAcontinue" xml:space="preserve">
+    <value>Continuer la Grande Aventure</value>
+  </data>
+  <data name="EndlevelScreenPressAretry" xml:space="preserve">
+    <value>Réassayer le niveau</value>
+  </data>
+  <data name="EndlevelScreenPressB" xml:space="preserve">
+    <value>Retour à l'écran titre</value>
+  </data>
+  <data name="EndlevelScreenRemainingBombs" xml:space="preserve">
+    <value>Bombes restantes</value>
+  </data>
+  <data name="EndlevelScreenRemainingLives" xml:space="preserve">
+    <value>Vies restantes</value>
+  </data>
+  <data name="Fullscreen" xml:space="preserve">
+    <value>Plein écran</value>
+  </data>
+  <data name="Gamepad" xml:space="preserve">
+    <value>Gamepad 360</value>
+  </data>
+  <data name="Guest" xml:space="preserve">
+    <value>Invité</value>
+  </data>
+  <data name="Hard" xml:space="preserve">
+    <value>Difficile</value>
+  </data>
+  <data name="HardDesc" xml:space="preserve">
+    <value>C'est dur ! Un vrai challenge, aucune pitié : moins de vie, tirs indestructibles, beaucoup de points gagnés. Pour joueurs confirmés.</value>
+  </data>
+  <data name="Joystick" xml:space="preserve">
+    <value>Joystick</value>
+  </data>
+  <data name="JoystickWarning" xml:space="preserve">
+    <value>N'utilisez pas cette configuration pour jouer avec un gamepad 360.</value>
+  </data>
+  <data name="KeyboardMouse" xml:space="preserve">
+    <value>Clavier/Souris</value>
+  </data>
+  <data name="Language" xml:space="preserve">
+    <value>Langue</value>
+  </data>
+  <data name="Level0Desc" xml:space="preserve">
+    <value>Après une soirée bien arrosée d'eau, notre héros sans nom doit se rendre chez Mamie pour le goûter. Rater ce moment de partage serait inexcusable, mais notre pauvre bonhomme n'a pas vraiment les yeux en face des trous. Familiarisez-vous avec les commandes de son petit vaisseau rond et aidez-le à trouver son chemin !</value>
+  </data>
+  <data name="Level0Message1" xml:space="preserve">
+    <value>Bienvenue dans The Great Paper Adventure ! Et bienvenue dans ce tout petit didacticiel.</value>
+  </data>
+  <data name="Level0Message10" xml:space="preserve">
+    <value>Toujours vivant ? Alors vous êtes prêts pour l'aventure ! Saurez-vous trouver le chemin jusque chez Mamie pour prendre le goûter avec elle ?</value>
+  </data>
+  <data name="Level0Message13" xml:space="preserve">
+    <value>Au fait, cumuler les bonus permet d'augmenter la puissance de certaines armes.</value>
+  </data>
+  <data name="Level0Message2" xml:space="preserve">
+    <value>Apprenez à maîtriser votre engin dans ce niveau simple et sans trop de dangers avant de prendre le chemin de l'aventure !</value>
+  </data>
+  <data name="Level0Message3" xml:space="preserve">
+    <value>Les commandes de base seront affichées sur le petit vaisseau. Elles se trouvent aussi dans le menu de pause.</value>
+  </data>
+  <data name="Level0Message4" xml:space="preserve">
+    <value>Déplacez votre vaisseau et tirez sur le levier devant la pancarte en bois pour commencer le niveau.</value>
+  </data>
+  <data name="Level0Message5" xml:space="preserve">
+    <value>Et c'est parti ! De nombreux ennemis plus ou moins stupides vous attendent, comme des innocentes petites vaches. Détruisez-les tous ! Pas de diplomatie.</value>
+  </data>
+  <data name="Level0Message6" xml:space="preserve">
+    <value>Trop d'ennemis à l'écran ? Lancez une Mega-bombe pour tout détruire, ennemis comme tirs !</value>
+  </data>
+  <data name="Level0Message7" xml:space="preserve">
+    <value>Esquiver les tirs est votre meilleure chance de survivre. Ce suicide collectif de bovins est l'occasion de le confirmer.</value>
+  </data>
+  <data name="Level0Message8" xml:space="preserve">
+    <value>Bon, tout ça, c'était facile. Essayons maintenant avec des ennemis mobiles.</value>
+  </data>
+  <data name="Level0Message9" xml:space="preserve">
+    <value>Certains ennemis libèrent des bonus en mourant : armes, munitions de bombes, vies supplémentaires...</value>
+  </data>
+  <data name="Level0Name" xml:space="preserve">
+    <value>La colline a des vaches</value>
+  </data>
+  <data name="Level1Desc" xml:space="preserve">
+    <value>Des vaches suicidaires, des îles flottantes, des punching-balls géants... On ne peut pas dire que la route soit très familière ou accueillante. Et cela ne semble pas s'améliorer au vu des silhouettes étranges à l'horizon. Pourtant, notre petit héros est persuadé de prendre la bonne direction. De toute façon, pas le temps de faire demi-tour !</value>
+  </data>
+  <data name="Level1Name" xml:space="preserve">
+    <value>Furieux goûter</value>
+  </data>
+  <data name="Level2Part1Desc" xml:space="preserve">
+    <value>Bon, notre héros s'en rend compte un peu tard, mais il est complètement perdu. Et en plus il a faim, à cause de ce biscuit vindicatif. Et têtu comme un breton, il continue son chemin et s'enfonce à présent dans un désert rocheux...</value>
+  </data>
+  <data name="Level2Part2Desc" xml:space="preserve">
+    <value>Depuis quand Mamie vit-elle sous terre ? La route a peut-être changé, mais pas au point de passer par une caverne, si ? Au point où tu en es, autant aller voir.</value>
+  </data>
+  <data name="Level2_1Name" xml:space="preserve">
+    <value>Canyon Cactae</value>
+  </data>
+  <data name="Level2_2Name" xml:space="preserve">
+    <value>Méprisable cactus</value>
+  </data>
+  <data name="Level3Part1Desc" xml:space="preserve">
+    <value>Des goûters chocolatés rêvant de conquérir le monde, un cactus chef de tribu de nains mexicains... Tout cela ne tourne pas rond ! Heureusement, la vue de la mer redonne courage à notre héros. A priori il n'y avait pas besoin de la traverser pour aller chez Mamie... mais au moins c'est un élément familier. Il y a même une sirène toute mignonne !</value>
+  </data>
+  <data name="Level3Part2Desc" xml:space="preserve">
+    <value>Exploser des barils contenant des déchets hautement toxiques n'était décidément pas une bonne idée... L'eau comme la terre est en train de prendre une couleur pas franchement rassurante. Fait vite demi-tour !</value>
+  </data>
+  <data name="Level3_1Name" xml:space="preserve">
+    <value>Souvenirs bretonnants</value>
+  </data>
+  <data name="Level3_2Name" xml:space="preserve">
+    <value>Souvenirs intoxiqués</value>
+  </data>
+  <data name="Level4_1Desc" xml:space="preserve">
+    <value>Ce petit aller-retour maritime mis à part, c'est quand même un bien beau voyage que notre petit héros effectue. Dommage qu'il ait saccagé chaque zone qu'il ait visité, mais c'était de la légitime défense. A force d'aller tout droit, le voici arrivé dans les montagnes. Il se souvient alors qu'on les aperçoit de la fenêtre de chez Mamie : il ne peut plus être bien loin !</value>
+  </data>
+  <data name="Level4_1Name" xml:space="preserve">
+    <value>Course-poursuite</value>
+  </data>
+  <data name="Level4_2Desc" xml:space="preserve">
+    <value>C'était moins une ! Entre l'avalanche et l'attaquant mystère, notre héros a bien cru y passer. Mais à peine eût-il le temps de penser à cela qu'un pingouin avec un casque sur la tête frôla son petit vaisseau, manquant de rendre une grand-mère malheureuse. Il est temps de traverser ces montagnes !</value>
+  </data>
+  <data name="Level4_2Name" xml:space="preserve">
+    <value>Sous la neige</value>
+  </data>
+  <data name="Level5Desc" xml:space="preserve">
+    <value>Le GPS de notre petit héros s'allume enfin : le voyage touche donc à sa fin grâce à la technologie. Seul bémol, il faut traverser une sombre forêt que l'on dit hantée. Mais c'est le seul moyen d'arriver à l'heure, et Mamie sera contente d'avoir des potirons pour faire de la soupe !</value>
+  </data>
+  <data name="Level5Name" xml:space="preserve">
+    <value>La carotte maléfique</value>
+  </data>
+  <data name="LevelSelectionScreenBestScore" xml:space="preserve">
+    <value>Meilleurs scores</value>
+  </data>
+  <data name="LevelSelectionScreenMove" xml:space="preserve">
+    <value>Se déplacer sur la carte</value>
+  </data>
+  <data name="LevelSelectionScreenNoHighscore" xml:space="preserve">
+    <value>Pas encore de records</value>
+  </data>
+  <data name="LevelSelectionScreenPart" xml:space="preserve">
+    <value>Partie</value>
+  </data>
+  <data name="LevelSelectionScreenPressA" xml:space="preserve">
+    <value>Jouer ce niveau</value>
+  </data>
+  <data name="LevelSelectionScreenPressB" xml:space="preserve">
+    <value>Retour à l'écran titre</value>
+  </data>
+  <data name="LevelSelectionScreenPressStart" xml:space="preserve">
+    <value>Commencer !</value>
+  </data>
+  <data name="LowAmmo" xml:space="preserve">
+    <value>Peu de munitions !</value>
+  </data>
+  <data name="Misc" xml:space="preserve">
+    <value>Divers</value>
+  </data>
+  <data name="Mode1P" xml:space="preserve">
+    <value>Mode 1 joueur</value>
+  </data>
+  <data name="Mode2P" xml:space="preserve">
+    <value>Mode 2 joueurs</value>
+  </data>
+  <data name="Music" xml:space="preserve">
+    <value>Musiques</value>
+  </data>
+  <data name="NoDevice" xml:space="preserve">
+    <value>Pas de périphérique</value>
+  </data>
+  <data name="Normal" xml:space="preserve">
+    <value>Normal</value>
+  </data>
+  <data name="NormalDesc" xml:space="preserve">
+    <value>Le jeu est un peu plus dur, mais vous pouvez toujours détruire les tirs les plus dérangeants. Pour les joueurs peu habitués aux jeux de type "shoot them up"</value>
+  </data>
+  <data name="OptionScreenBack" xml:space="preserve">
+    <value>Retour à l'écran titre</value>
+  </data>
+  <data name="OptionScreenMove" xml:space="preserve">
+    <value>Se déplacer / Régler option</value>
+  </data>
+  <data name="OptionsFullScreen" xml:space="preserve">
+    <value>Plein écran</value>
+  </data>
+  <data name="OptionsMusicVolume" xml:space="preserve">
+    <value>Volume musique</value>
+  </data>
+  <data name="OptionsRumble" xml:space="preserve">
+    <value>Vibrations</value>
+  </data>
+  <data name="OptionsScreenResolution" xml:space="preserve">
+    <value>Résolution d'écran</value>
+  </data>
+  <data name="OptionsSoundVolume" xml:space="preserve">
+    <value>Volume bruitages</value>
+  </data>
+  <data name="P1Device" xml:space="preserve">
+    <value>Périph. Joueur 1</value>
+  </data>
+  <data name="P1Name" xml:space="preserve">
+    <value>Nom Joueur 1</value>
+  </data>
+  <data name="P2PressStartPC" xml:space="preserve">
+    <value>- Appuyez sur Start/Entrée -</value>
+  </data>
+  <data name="P2PressStartXbox" xml:space="preserve">
+    <value>- Appuyez sur Start -</value>
+  </data>
+  <data name="Player" xml:space="preserve">
+    <value>Joueur</value>
+  </data>
+  <data name="Player1" xml:space="preserve">
+    <value>Joueur 1</value>
+  </data>
+  <data name="Player2" xml:space="preserve">
+    <value>Joueur 2</value>
+  </data>
+  <data name="PlayerBack" xml:space="preserve">
+    <value>Revenir à l'écran titre</value>
+  </data>
+  <data name="PlayerBomb" xml:space="preserve">
+    <value>Lancer une megabombe</value>
+  </data>
+  <data name="PlayerFire" xml:space="preserve">
+    <value>Tirer</value>
+  </data>
+  <data name="PlayerMove" xml:space="preserve">
+    <value>Déplacer l'engin</value>
+  </data>
+  <data name="PlayerPause" xml:space="preserve">
+    <value>Revenir au jeu !</value>
+  </data>
+  <data name="PlayerRetry" xml:space="preserve">
+    <value>Recommencer le niveau courant</value>
+  </data>
+  <data name="Rumble" xml:space="preserve">
+    <value>Vibrations (Gamepad)</value>
+  </data>
+  <data name="ScreenResolution" xml:space="preserve">
+    <value>Résolution d'écran</value>
+  </data>
+  <data name="Selection" xml:space="preserve">
+    <value>Choix</value>
+  </data>
+  <data name="ShowCreditsScreen" xml:space="preserve">
+    <value>Afficher les crédits</value>
+  </data>
+  <data name="SkipMessageButton" xml:space="preserve">
+    <value>Passer le message</value>
+  </data>
+  <data name="Sound" xml:space="preserve">
+    <value>Sons</value>
+  </data>
+  <data name="StartLevel" xml:space="preserve">
+    <value>Commencer à jouer !</value>
+  </data>
+  <data name="SwitchToScoreTypeCoop" xml:space="preserve">
+    <value>Afficher les scores deux joueurs</value>
+  </data>
+  <data name="SwitchToScoreTypeSingle" xml:space="preserve">
+    <value>Afficher les scores un joueur</value>
+  </data>
+  <data name="SystemInvalidResolution" xml:space="preserve">
+    <value>La résolution choisie n'a pas pu être appliquée. Retour en 1024*768.</value>
+  </data>
+  <data name="TitleScreenButtonA" xml:space="preserve">
+    <value>Sélectionner</value>
+  </data>
+  <data name="TitleScreenMove" xml:space="preserve">
+    <value>Choisir sous-menu</value>
+  </data>
+  <data name="Volumes" xml:space="preserve">
+    <value>Volumes</value>
+  </data>
+</root>
